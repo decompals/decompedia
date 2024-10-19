@@ -2,13 +2,11 @@
 title: Home
 description: 
 published: true
-date: 2024-10-19T20:10:24.766Z
+date: 2024-10-19T20:11:02.950Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T19:55:57.341Z
 ---
-
-# Home
 
 Welcome to Decompedia!
 

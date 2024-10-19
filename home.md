@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2024-10-19T20:11:02.950Z
+date: 2024-10-19T20:15:29.981Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T19:55:57.341Z
@@ -16,20 +16,20 @@ Whilst there are disassembly projects for pre-5th generation console games, it w
 
 ### 5th Generation
 - [Nintendo 64](/platforms/nintendo-64)
-- PlayStation
-- Saturn
+- [PlayStation](/platforms/playstation)
+- [Saturn](/platforms/saturn)
 
 ### 6th Generation
-- Dreamcast
-- GameCube
-- PlayStation 2
-- Xbox
+- [Dreamcast](/platforms/dreamcast)
+- [GameCube](/platforms/gamecube)
+- [PlayStation 2](/platforms/playstation-2)
+- [Xbox](/platforms/xbox)
 
 ### 7th Generation
-- Wii
+- [Wii](/platforms/wii)
 
 ### Handheld
-- Game Boy Advance
-- Nintendo DS
-- Nintendo 3DS
-- Nintendo Switch
+- [Game Boy Advance](/platforms/game-boy-advance)
+- [Nintendo DS](/platforms/nintendo-ds)
+- [Nintendo 3DS](/platforms/nintendo-3ds)
+- [Nintendo Switch](/platforms/switch)

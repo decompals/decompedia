@@ -2,13 +2,11 @@
 title: GameCube & Wii
 description: 
 published: true
-date: 2024-10-19T20:34:00.052Z
+date: 2024-10-19T20:37:29.846Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:34:00.052Z
 ---
-
-# GameCube & Wii
 
 While newer than Nintendo 64 decompilation, GameCube & Wii decompilation is fairly advanced, with a variety of tools and projects. Due to the similarity of the consoles, nearly all tooling and information is shared between the two, leading to a combined community.
 

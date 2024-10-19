@@ -1,0 +1,117 @@
+---
+title: Nintendo 64
+description: 
+published: true
+date: 2024-10-19T20:09:51.070Z
+tags: 
+editor: markdown
+dateCreated: 2024-10-19T20:09:51.070Z
+---
+
+# Nintendo 64
+
+The Nintendo 64 decomp community is arguably one of the most mature, with a huge diversity of tools and projects. Most N64 games use either IDO or GCC compilers.
+
+## Projects
+
+- AeroGauge
+- Aidyn Chronicles: The First Mage
+- Animal Forest
+- Banjo-Kazooie
+- Banjo-Tooie
+- Blast Corps
+- Body Harvest
+- Bomberman Hero
+- Chameleon Twist
+- Chameleon Twist 2
+- Conker's Bad Fur Day
+- Diddy Kong Racing
+- Dinosaur Planet
+- Donkey Kong 64
+- Doom 64
+- Dr. Mario 64
+- Duke Nukem: Zero Hour
+- F-Zero X
+- Goemon's Great Adventure
+- GoldenEye 007
+- Kirby 64: The Crystal Shards
+- Mario Kart 64
+- Mario Party
+- Mario Party 2
+- Mario Party 3
+- Neon Genesis Evangelion
+- Mischief Makers
+- Ogre Battle 64: Person of Lordly Caliber
+- Paper Mario
+- Perfect Dark
+- Pokémon Puzzle League
+- Pokémon Snap
+- Pokémon Stadium
+- Quest 64
+- Rocket: Robot on Wheels
+- Snowboard Kids
+- Space Station Silicon Valley
+- Star Fox 64
+- Super Mario 64
+- Super Smash Bros.
+- Superman 64
+- The Legend of Zelda: Ocarina of Time
+- The Legend of Zelda: Majora's Mask
+- Turok 3: Shadow of Oblivion
+- Virtual Pro Wrestling 2: Ōdō Keishō
+- Wave Race 64
+- Yoshi's Story
+
+## Libraries
+
+- Libultra
+- NuSys
+
+## Microcode
+
+- boot
+  - rspboot
+- gfx
+  - f3dex
+  - f3dex2
+- audio
+- jpeg decoding
+- hqvm
+
+## Compilers
+
+- [IDO](/compilers/ido)
+- [GCC](/compilers/gcc)
+  - [KMC](/compilers/gcc/kmc)
+  - [EGCS](/compilers/gcc/egcs)
+  - [SN64](/compilers/gcc/sn64)
+
+## Tools
+
+### Decompilers
+
+- [m2c](/tools/m2c)
+- [Ghidra](/tools/ghidra)
+
+### Disassemblers
+
+- [splat](/tools/splat)
+- [spimdisasm](/tools/spimdisasm)
+
+### Other
+
+- [asm-differ](https://github.com/simonlindholm/asm-differ) (compare assembly side by side)
+- [decomp-permuter](https://github.com/simonlindholm/decomp-permuter) (try source changes at random to fish for matches)
+- [asm-processor](https://github.com/simonlindholm/asm-processor) (splice assembly into source .c files)
+- flib
+- lfgfx
+- n64img
+- [gfxdis](https://github.com/glankk/n64/tree/master/src/gfxdis) (disassemble dlists for f3d, f3dex, ...), [libgfxd](https://github.com/glankk/libgfxd) (a programmer friendly library), [pygfxd](https://github.com/Thar0/pygfxd) (python bindings)
+
+## Resources
+
+- [n64brew.dev](https://n64brew.dev/wiki/Main_Page)
+- [hack64.net](https://hack64.net/wiki/doku.php?id=nintendo_64)
+- [en64.shoutwiki.com](http://en64.shoutwiki.com/wiki/Main_Page)
+- [M64 documentation](https://hackmd.io/opEB-OmxRa26P8h8pA-x7w)
+- [RSP Disassembler](https://bin.smwcentral.net/u/26355/N64_RSP_DISASSEMBLER.html)

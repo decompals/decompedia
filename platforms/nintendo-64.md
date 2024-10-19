@@ -2,13 +2,11 @@
 title: Nintendo 64
 description: 
 published: true
-date: 2024-10-19T20:09:51.070Z
+date: 2024-10-19T20:37:13.809Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:09:51.070Z
 ---
-
-# Nintendo 64
 
 The Nintendo 64 decomp community is arguably one of the most mature, with a huge diversity of tools and projects. Most N64 games use either IDO or GCC compilers.
 

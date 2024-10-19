@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2024-10-19T20:57:42.089Z
+date: 2024-10-19T20:59:50.420Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T19:55:57.341Z
@@ -19,7 +19,7 @@ Matching decompilation is a difficult and time-consuming process, leading us to 
 ## Resources
 
 - [decomp.dev](https://decomp.dev) | Decompilation progress reports
-- [decomp.me](https://decomp.me) | Collaboratively decompile functions
+- [decomp.me](https://decomp.me) | Collaborative decompilation platform
 
 ## Platforms
 

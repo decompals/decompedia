@@ -2,7 +2,7 @@
 title: Platforms
 description: 
 published: true
-date: 2024-10-19T20:15:01.230Z
+date: 2024-10-19T20:34:45.345Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:15:01.230Z
@@ -15,12 +15,12 @@ dateCreated: 2024-10-19T20:15:01.230Z
 
 ## 6th Generation
 - [Dreamcast](/platforms/dreamcast)
-- [GameCube](/platforms/gamecube)
+- [GameCube](/platforms/gamecube-wii)
 - [PlayStation 2](/platforms/playstation-2)
 - [Xbox](/platforms/xbox)
 
 ## 7th Generation
-- [Wii](/platforms/wii)
+- [Wii](/platforms/gamecube-wii)
 
 ## Handheld
 - [Game Boy Advance](/platforms/game-boy-advance)

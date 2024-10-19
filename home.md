@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2024-10-19T20:36:10.949Z
+date: 2024-10-19T20:39:13.285Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T19:55:57.341Z
@@ -12,7 +12,8 @@ Welcome to Decompedia!
 
 ## Resources
 
-- [decomp.dev](https://decomp.dev)
+- [decomp.dev](https://decomp.dev) | Decompilation progress reports
+- [decomp.me](https://decomp.me) | Collaboratively decompile functions
 
 ## Platforms
 

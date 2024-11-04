@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2024-11-04T22:25:04.269Z
+date: 2024-11-04T22:26:57.684Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -31,8 +31,8 @@ There is no known debug information for any Skyward Sword version, so a large pa
 * [Revolution SDK](/libraries/dolphin-sdk)
 * LibMS
 * Various smaller libraries shared with [NSMBW](/projects/new-super-mario-bros-wii) and AC: City Folk:
-  * cLib | some math stuff, random numbers)
-  * sLib | interpolation, easing, state management)
+  * cLib | some math stuff, random numbers
+  * sLib | interpolation, easing, state management
   * mLib | wrappers for NW4R's g3d and lyt, wrappers for EGG, math types
 * Code borrowed from other games, e.g. Collision code or parts of JParticle
 

@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2024-11-04T22:21:39.121Z
+date: 2024-11-04T22:25:04.269Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -10,13 +10,13 @@ dateCreated: 2024-11-04T15:52:31.951Z
 
 ## About the project
 
-A decompilation of The Legend of Zelda: Skyward Sword for the [Nintendo Wii](/platforms/gamecube-wii).
+An in-progress decompilation of The Legend of Zelda: Skyward Sword for the [Nintendo Wii](/platforms/gamecube-wii). Currently builds NTSC-1.0 (SOUE01 Rev 0), with other versions planned.
 
 The repository is hosted in the [ZeldaRET GitHub organization](https://github.com/zeldaret/ss), and progress can be viewed on [decomp.dev](https://decomp.dev/zeldaret/ss).
 
 There is no known debug information for any Skyward Sword version, so a large part of this project requires original research. However, some foundational libraries and even the core engine can be found in other games with more debugging info available.
 
-## History (brief)
+## History
 
 * November 2011: Skyward Sword releases for the Nintendo Wii.
 * ????: speedrunning community starts analyzing and reversing the game.

@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2024-11-04T22:26:57.684Z
+date: 2024-11-04T22:28:37.729Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -38,7 +38,7 @@ There is no known debug information for any Skyward Sword version, so a large pa
 
 ## External Resources
 
-As mentioned above, much of our knowledge of Skyward Sword comes from other games:
+As mentioned above, much of our knowledge about Skyward Sword's code comes from other games:
 
 * [New Super Mario Bros. Wii](/projects/new-super-mario-bros-wii) shares much of the core engine and libraries
   * Many [symbol names](https://rootcubed.dev/nsmbw-symbols/symbolList/) have been discovered - always worth checking

@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2024-11-04T22:29:25.744Z
+date: 2024-11-04T23:24:44.927Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -20,7 +20,9 @@ There is no known debug information for any Skyward Sword version, so a large pa
 
 * November 2011: Skyward Sword releases for the Nintendo Wii.
 * ????: speedrunning community starts analyzing and reversing the game.
-* May 2020: work begins on sslib, a library for parsing and writing Skyward Sword's assets, later developed into the [Skyward Sword Randomizer](https://github.com/ssrando/ssrando) project. The project hosts a Ghidra repository for collaborative reversing of Skyward Sword's code.
+* May 2020: Work begins on sslib, a library for parsing and writing Skyward Sword's assets, later developed into the [Skyward Sword Randomizer](https://github.com/ssrando/ssrando) project. The project hosts a Ghidra repository for collaborative reversing of Skyward Sword's code.
+* October 2020: The shared Ghidra repository is created, previously research was done independently.
+* July 2023: Work towards preparing for a Decomp is done via [ppcdis](https://github.com/SeekyCt/ppcdis), manually splitting asm files and finding code boundaries
 * August 2023: The decomp project respository is created using [Decomp Toolkit](https://github.com/encounter/decomp-toolkit) and some files are being decompiled.
 * June 2024: The project is moved into the ZeldaRET organization, and the Ghidra repository alongside it.
 
@@ -34,7 +36,7 @@ There is no known debug information for any Skyward Sword version, so a large pa
   * cLib | some math stuff, random numbers
   * sLib | interpolation, easing, state management
   * mLib | wrappers for NW4R's g3d and lyt, wrappers for EGG, math types
-* Code borrowed from other games, e.g. Collision code or parts of JParticle
+* Code borrowed from other games, e.g. Collision code or parts of JParticle and JStudio
 
 ## External Resources
 

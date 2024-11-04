@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2024-11-04T22:28:37.729Z
+date: 2024-11-04T22:29:25.744Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -27,7 +27,7 @@ There is no known debug information for any Skyward Sword version, so a large pa
 ## Libraries
 
 * [EGG](/libraries/egg)
-* [Nintendoware for Revolution](/libraries/nw4r)
+* [NintendoWare for Revolution](/libraries/nw4r)
 * [Revolution SDK](/libraries/dolphin-sdk)
 * LibMS
 * Various smaller libraries shared with [NSMBW](/projects/new-super-mario-bros-wii) and AC: City Folk:

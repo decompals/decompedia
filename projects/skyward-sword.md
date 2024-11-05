@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2024-11-04T23:24:44.927Z
+date: 2024-11-05T08:53:46.020Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -10,7 +10,7 @@ dateCreated: 2024-11-04T15:52:31.951Z
 
 ## About the project
 
-An in-progress decompilation of The Legend of Zelda: Skyward Sword for the [Nintendo Wii](/platforms/gamecube-wii). Currently builds NTSC-1.0 (SOUE01 Rev 0), with other versions planned.
+An in-progress decompilation of The Legend of Zelda: Skyward Sword for the [Nintendo Wii](/platforms/gamecube-wii). Currently builds NTSC-1.0 (SOUE01 Rev 0), with other versions planned. Skyward Sword HD for the Nintendo Switch is out of scope, though the Skyward Sword HD Randomizer community has done some reverse engineering.
 
 The repository is hosted in the [ZeldaRET GitHub organization](https://github.com/zeldaret/ss), and progress can be viewed on [decomp.dev](https://decomp.dev/zeldaret/ss).
 
@@ -20,8 +20,8 @@ There is no known debug information for any Skyward Sword version, so a large pa
 
 * November 2011: Skyward Sword releases for the Nintendo Wii.
 * ????: speedrunning community starts analyzing and reversing the game.
-* May 2020: Work begins on sslib, a library for parsing and writing Skyward Sword's assets, later developed into the [Skyward Sword Randomizer](https://github.com/ssrando/ssrando) project. The project hosts a Ghidra repository for collaborative reversing of Skyward Sword's code.
-* October 2020: The shared Ghidra repository is created, previously research was done independently.
+* May 2020: Work begins on sslib, a library for parsing and writing Skyward Sword's assets, later developed into the [Skyward Sword Randomizer](https://github.com/ssrando/ssrando) project.
+* October 2020: The shared Ghidra repository is created in the ssrando community, previously research was done independently.
 * July 2023: Work towards preparing for a Decomp is done via [ppcdis](https://github.com/SeekyCt/ppcdis), manually splitting asm files and finding code boundaries
 * August 2023: The decomp project respository is created using [Decomp Toolkit](https://github.com/encounter/decomp-toolkit) and some files are being decompiled.
 * June 2024: The project is moved into the ZeldaRET organization, and the Ghidra repository alongside it.
@@ -33,6 +33,7 @@ There is no known debug information for any Skyward Sword version, so a large pa
 * [Revolution SDK](/libraries/dolphin-sdk)
 * LibMS
 * Various smaller libraries shared with [NSMBW](/projects/new-super-mario-bros-wii) and AC: City Folk:
+  * fLib | core engine framework
   * cLib | some math stuff, random numbers
   * sLib | interpolation, easing, state management
   * mLib | wrappers for NW4R's g3d and lyt, wrappers for EGG, math types

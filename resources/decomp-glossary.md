@@ -2,7 +2,7 @@
 title: Decomp Glossary
 description: 
 published: true
-date: 2024-11-19T17:56:47.312Z
+date: 2024-11-21T17:23:34.939Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-19T17:56:47.312Z
@@ -201,13 +201,109 @@ There's primarily two reasons for structuring GObjs like this:
 2. It allows us to influence the decompiler and have it write the types inside `user_data` more efficiently. 
 
 ### JObjs
+
 ### State tables for items and stages
 
-
-## ANSI C behavior
+## Misc behavior
 
 ### Declaration before initialization rule
 
+Melee is compiled with ANSI C, the first C specification by ANSI, and its largest oddity that can catch you off guard if you don't know about it is the fact that all variables *must* be declared at the start of the scope before any other types of statements can be made. This is why you may recieve this strange error:
+
+```
+### mwcceppc.exe Compiler:
+
+User break, cancelled...
+#    File: src\melee\it\items\itnokonoko.c
+# ----------------------------------------
+#      21: HSD_JObj* jobj = HSD_GObjGetHSDObj(gobj);
+#   Error: ^^^^^^^^
+#   expression syntax error
+#   Too many errors printed, aborting program
+ninja: build stopped: subcommand failed.
+```
+
+from this code:
+
+```c
+void ansi(Item_GObj *gobj) {
+    Item *ip = GET_ITEM(gobj);
+    ip->xD5C = 0;
+
+    HSD_JObj* jobj = HSD_GObjGetHSDObj(gobj);
+    HSD_JObjAddRotationY(jobj, 0.15707964f);
+}
+```
+
+To fix it, you would move the `jobj` declaration above the assignment to `ip->xD5C`:
+
+```c
+void ansi(Item_GObj *gobj) {
+    Item *ip = GET_ITEM(gobj);
+    HSD_JObj* jobj = HSD_GObjGetHSDObj(gobj);
+
+    ip->xD5C = 0;
+    HSD_JObjAddRotationY(jobj, 0.15707964f);
+}
+```
+
+You could also encase the `jobj` declaration in its own scope if the function is excessively long:
+
+```c
+void ansi(Item_GObj *gobj) {
+    Item *ip = GET_ITEM(gobj);
+    ip->xD5C = 0;
+    
+    // a bunch of stuff
+
+    {
+        HSD_JObj* jobj = HSD_GObjGetHSDObj(gobj);
+        HSD_JObjAddRotationY(jobj, 0.15707964f);
+    }
+}
+```
+
 ### Assumed integer return on undeclared functions
 
+MWCC by default will allow you generate an object file that calls functions you don't have a prototype for, even if the call sites contradict themselves:
+```c
+// fdsa and fdsa_2 are not defined anywhere in the TU, but both of these compile
 
+void asdf(s32 a) {
+    fdsa(a);
+}
+
+void asdf_2(s32 a, f32 b) {
+    fdsa_2(a);
+    fdsa_2(b);
+}
+```
+
+This isn't a big deal normally because the linker will see this and throw a `function has no prototype` error, but since in a decomp we aren't running the linker often, strange errors like this can pop up:
+
+```
+### mwcceppc.exe Compiler:
+
+User break, cancelled...
+#    File: src\melee\it\items\itnokonoko.c
+# ----------------------------------------
+#      18: Item *ip = GET_ITEM(gobj);
+#   Error:                          ^
+#   cannot convert
+#   'int' to
+#   'struct Item *'
+```
+
+This arises because the compiler will assume that all undeclared functions have an integer return, which contradicts with the `Item` type we're trying to assign the `GET_ITEM` macro to, which it's interpreting as a function since we haven't written the macro definition (`#include "it/inlines.h"`). In the Melee repo, passing `--require-protos` will pass a flag to the compiler to throw the proper warning:
+
+```
+### mwcceppc.exe Compiler:
+
+User break, cancelled...
+#    File: src\melee\it\items\itnokonoko.c
+# ----------------------------------------
+#      19: Item *ip = GET_ITEM(gobj);
+#   Error:            ^^^^^^^^
+#   function has no prototype
+#   Too many errors printed, aborting program
+```

@@ -2,7 +2,7 @@
 title: Decomp Glossary
 description: 
 published: true
-date: 2024-11-21T22:15:32.094Z
+date: 2024-11-21T22:21:54.337Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-19T17:56:47.312Z
@@ -398,7 +398,7 @@ ItemStateTable it_803F83F0[] = { { -1, it_802D88CC, it_802D88D4, it_802D8910 },
 00000030: 00 00 00 02 00 00 00 00    00 00 00 00 00 00 00 00 
 ```
 
-You'll notice if you look at the bytes of this struct in the `.data` tab of objdiff that the places where the function pointers should be are zeroed out, which is because the linker still has to be run to finalize where the addresses will be, as [explained](decomp-intro-melee#compiling-and-linking) in the intro section. The assembly is getting the labels not from the empty slots here, but a specific table in the object file that isn't carried over into the assembly:
+You'll notice if you look at the bytes of this struct in the `.data` tab of objdiff that the places where the function pointers should be are zeroed out, which is because the linker still has to be run to finalize where the addresses will be, as [explained](/resources/decomp-intro-melee#compiling-and-linking) in the intro section. The assembly is getting the labels not from the empty slots here, but a specific table in the object file that isn't carried over into the assembly:
 
 ```
 (in the objdump output of itheiho.o)

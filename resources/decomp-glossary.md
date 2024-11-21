@@ -2,7 +2,7 @@
 title: Decomp Glossary
 description: 
 published: true
-date: 2024-11-21T21:15:13.441Z
+date: 2024-11-21T22:15:32.094Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-19T17:56:47.312Z
@@ -40,8 +40,6 @@ typedef unsigned long long u64;
 {.is-info}
 
 ## Compiler behavior
-
-### Loading from a pointer
 
 ### Integer and Float Conversions
 
@@ -212,7 +210,7 @@ This generates the notorious "Rotate Left Word Immediate then Mask Insert M-form
 
 In the case of the one that's inserting 3 into the four-bit slot `b4567` (`rlwimi r0, r4, 0, 28, 31`), we're inserting n = 4 bits at position b = 28 with the contents of register RS = r4 (which has 0x3 loaded into it) with right-justification, making SH = 32 - (28 + 4) - 1 = 0, MB = 28, and ME = (28 + 4) - 1 = 31.
 
-The decompiler will output the raw functionality of the `rlwimi` without any assumptions about its function (you can also generate alternate patterns on [this](https://celestialamber.github.io/rlwinm-clrlwi-decoder/) site), which looks like this:
+The decompiler will output the raw functionality of the `rlwimi` without any assumptions about its functionality (you can also generate alternate patterns on [this](https://celestialamber.github.io/rlwinm-clrlwi-decoder/) site), which looks like this:
 
 ```c
 void set_flags(u8 *arg0) {
@@ -262,7 +260,93 @@ There's primarily two reasons for structuring GObjs like this:
 1. It gives context to the decomper as to what object a given function takes without having to look at the implementation.
 2. It allows us to influence the decompiler and have it write the types inside `user_data` more efficiently. 
 
-### JObjs
+### JObjs and its inlines
+
+The inlines that you will likely see the most of are the getters and setters for joint objects, or `JObj`s, which contain a lot of leftover debug assertions. For example, this:
+
+```c
+// in src/sysdolphin/baselib/jobj.h
+
+static inline void HSD_JObjGetScale(HSD_JObj* jobj, Vec3* scale)
+{
+    HSD_ASSERT(823, jobj);
+    HSD_ASSERT(824, scale);
+    *scale = jobj->scale;
+}
+
+static inline void HSD_JObjSetScale(HSD_JObj* jobj, Vec3* scale)
+{
+    HSD_ASSERT(760, jobj);
+    HSD_ASSERT(761, scale);
+    jobj->scale = *scale;
+    if (!(jobj->flags & JOBJ_MTX_INDEP_SRT)) {
+        HSD_JObjSetMtxDirty(jobj);
+    }
+}
+
+```
+
+```c
+void jobj_demo(Item_GObj *gobj) {
+    HSD_JObj *jobj = HSD_GObjGetHSDObj(gobj);
+    Vec3 scale;
+    HSD_JObjGetScale(jobj, &scale);
+    scale.x += 0.05f;
+    HSD_JObjSetScale(jobj, &scale);
+}
+```
+
+has this decompiler output:
+
+```c
+static s8 @193[8] = { 0x6A, 0x6F, 0x62, 0x6A, 0x2E, 0x68, 0, 0 };
+static s8 @194[5] = { 0x6A, 0x6F, 0x62, 0x6A, 0 };
+
+void jobj_demo(void *arg0) {
+    f32 sp14;
+    f32 sp10;
+    f32 spC;
+    HSD_JObj *temp_r31;
+    s32 temp_cr0_eq;
+    s32 var_r3;
+    u32 temp_r4;
+
+    temp_r31 = arg0->unk28;
+    if (temp_r31 == NULL) {
+        __assert(@193, 0x337U, @194);
+    }
+    spC = temp_r31->scale.x;
+    sp10 = temp_r31->scale.y;
+    sp14 = temp_r31->scale.z;
+    spC += 0.05f;
+    if (temp_r31 == NULL) {
+        __assert(@193, 0x2F8U, @194);
+    }
+    temp_r31->scale.x = spC;
+    temp_r31->scale.y = sp10;
+    temp_r31->scale.z = sp14;
+    if (!(temp_r31->flags & 0x02000000)) {
+        temp_cr0_eq = temp_r31 == NULL;
+        if (temp_cr0_eq == 0) {
+            if (temp_cr0_eq != 0) {
+                __assert(@193, 0x234U, @194);
+            }
+            temp_r4 = temp_r31->flags;
+            var_r3 = 0;
+            if (!(temp_r4 & 0x800000) && (temp_r4 & 0x40)) {
+                var_r3 = 1;
+            }
+            if (var_r3 == 0) {
+                HSD_JObjSetMtxDirtySub(temp_r31);
+            }
+        }
+    }
+}
+```
+
+You can see the split between the get and set call in `spC += 0.05f;`. The decompiler is able to successfully guess that `temp_r31` is a jobj at least, since it knows `HSD_JObjSetMtxDirtySub()` takes one. The other most obvious sign you have a jobj inline here is the several `__assert` functions generated from the `HSD_ASSERT()` macro; `@193` and `@194` are strings that say `jobj.h` and `jobj`. 
+
+Luckily the fact that `__assert` has a line number in the second argument means we can find the correct inline 100% of the time without having to even analyze what the rest of the code is doing: `0x337U` is 823, and `0x2F8U` is 760, unique indices present only in the `HSD_JObjGetScale` and `HSD_JObjSetScale` functions respectively. However if you look closely you'll notice there seemingly is a missing assert corresponding to the `scale` variable for both the getter and setter; this is because it got optimized out since `scale` was declared on the stack and thus its address can never be `NULL`, which is what the assert is checking for. Theoretically this could also happen to the `gobj` as well, but it is incredibly rare. 
 
 ### State tables for items and stages
 

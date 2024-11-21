@@ -2,7 +2,7 @@
 title: Decomp Glossary
 description: 
 published: true
-date: 2024-11-21T17:23:34.939Z
+date: 2024-11-21T21:15:13.441Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-19T17:56:47.312Z
@@ -163,6 +163,68 @@ To break it down:
 2. The loop does two loads and stores per iteration, or in other words, it copies 8 bytes of data per iteration. Since it loops 12 times, this totals to 96 bytes of data.
 3. One more load and store is done after the loop (after the counter register is decremented and `bdnz` goes to the next instruction instead of breaking), bringing the total to 100 bytes. 
 
+### Bit fields
+
+C has an odd feature known as *bit fields* which allow the programmer to define variables in a struct that can correspond to data smaller than a byte:
+
+```c
+typedef struct {
+    u8 b0 : 1;
+    u8 b1 : 1;
+    u8 b2 : 1;
+    u8 b3 : 1;
+    u8 b4567 : 4;
+} special_flags;
+
+void set_flags(special_flags *flags)
+{
+    flags->b0 = 1;
+    flags->b1 = 0;
+    flags->b4567 = 3;
+}
+```
+
+```
+lbz r0, 0x0(r3)
+li r4, 0x1
+rlwimi r0, r4, 7, 24, 24
+stb r0, 0x0(r3)
+li r5, 0x0
+li r4, 0x3
+lbz r0, 0x0(r3)
+rlwimi r0, r5, 6, 25, 25
+stb r0, 0x0(r3)
+lbz r0, 0x0(r3)
+rlwimi r0, r4, 0, 28, 31
+stb r0, 0x0(r3)
+blr
+```
+
+This generates the notorious "Rotate Left Word Immediate then Mask Insert M-form" (`rlwimi`) instruction that can be used in a variety of optimizations due to its flexibility, though it's not that hard to follow if you study the entry on page 73 of the [PowerPC User Instruction Set Architecture](https://files.decomp.dev/ppc_isa.pdf):
+
+> *rlwimi RA,RS,SH,MB,ME*
+>
+>  The contents of register RS are rotated left SH bits. A mask is generated having 1-bits from bit MB + 32 through bit ME + 32 and 0-bits elsewhere. The rotated data are inserted into register RA under control of the generated mask.
+> 
+> Let RAL represent the low-order 32 bits of register RA, with the bits numbered from 0 through 31.
+> 
+> rlwimi can be used to insert an n-bit field that is left-justified in the low-order 32 bits of register RS, into RAL starting at bit position b, by setting SH = 32 − b, MB = b, and ME = (b + n) − 1. It can be used to insert an n-bit field that is right-justified in the low-order 32 bits of register RS, into RAL starting at bit position b, by setting SH = 32 − (b + n) , MB = b, and ME = (b + n) − 1.
+
+In the case of the one that's inserting 3 into the four-bit slot `b4567` (`rlwimi r0, r4, 0, 28, 31`), we're inserting n = 4 bits at position b = 28 with the contents of register RS = r4 (which has 0x3 loaded into it) with right-justification, making SH = 32 - (28 + 4) - 1 = 0, MB = 28, and ME = (28 + 4) - 1 = 31.
+
+The decompiler will output the raw functionality of the `rlwimi` without any assumptions about its function (you can also generate alternate patterns on [this](https://celestialamber.github.io/rlwinm-clrlwi-decoder/) site), which looks like this:
+
+```c
+void set_flags(u8 *arg0) {
+    *arg0 |= 0x80;
+    *arg0 &= ~0x40;
+    *arg0 = (*arg0 & ~0xF) | 3;
+}
+```
+
+If you see patterns like the above in Melee decomp output, take a look at the struct and you'll likely see a bitfield struct where the write is happening. For instance, `ip->unkDCA = (u8) (ip->unkDCA & ~4);` should be written as `ip->xDC8_word.flags.x5 = 0;`.
+
+
 ## Melee-specific behavior
 
 ### GObjs and GET_ inlines
@@ -203,6 +265,77 @@ There's primarily two reasons for structuring GObjs like this:
 ### JObjs
 
 ### State tables for items and stages
+
+Most functions in the object files of the `it` and `gr` folders consist of what are referred to as *callback functions*, whose address gets saved to a function pointer that gets called somewhere in the code. Each item and stage contains structs that contain these pointers: `ItemStateTable` for items, and `StageCallbacks` and `StageData` for stages. The decompiler isn't able to extract these in most cases, so you need to open the assembly yourself to be able to include them. Here's what the state table for item `itheiho` looks like:
+
+
+```c
+ItemStateTable it_803F83F0[] = { { -1, it_802D88CC, it_802D88D4, it_802D8910 },
+                                 { 0, it_802D8984, it_802D8A54, it_802D8CC8 },
+                                 { -1, it_802D8DB4, it_802D8DBC, it_802D8E44 },
+                                 { -1, it_802D8E4C, it_802D8E54, it_802D8EA4 },
+                                 { 2, it_802D9274, it_802D9384,
+                                   it_802D95F4 } };
+
+```
+
+```
+# .data:0x0 | 0x803F83F0 | size: 0x50
+.obj it_803F83F0, global
+	.4byte 0xFFFFFFFF
+	.4byte it_802D88CC
+	.4byte it_802D88D4
+	.4byte it_802D8910
+	.4byte 0x00000000
+	.4byte it_802D8984
+	.4byte it_802D8A54
+	.4byte it_802D8CC8
+	.4byte 0xFFFFFFFF
+	.4byte it_802D8DB4
+	.4byte it_802D8DBC
+	.4byte it_802D8E44
+	.4byte 0xFFFFFFFF
+	.4byte it_802D8E4C
+	.4byte it_802D8E54
+	.4byte it_802D8EA4
+	.4byte 0x00000002
+	.4byte it_802D9274
+	.4byte it_802D9384
+	.4byte it_802D95F4
+.endobj it_803F83F0
+```
+
+```
+(in objdiff)
+.data
+00000000: ff ff ff ff 00 00 00 00    00 00 00 00 00 00 00 00 
+00000010: 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00 
+00000020: ff ff ff ff 00 00 00 00    00 00 00 00 00 00 00 00 
+00000030: 00 00 00 02 00 00 00 00    00 00 00 00 00 00 00 00 
+```
+
+You'll notice if you look at the bytes of this struct in the `.data` tab of objdiff that the places where the function pointers should be are zeroed out, which is because the linker still has to be run to finalize where the addresses will be, as [explained](decomp-intro-melee#compiling-and-linking) in the intro section. The assembly is getting the labels not from the empty slots here, but a specific table in the object file that isn't carried over into the assembly:
+
+```
+(in the objdump output of itheiho.o)
+RELOCATION RECORDS FOR [.data]:
+OFFSET   TYPE              VALUE
+00000004 UNKNOWN           it_802D88CC
+00000008 UNKNOWN           it_802D88D4
+0000000c UNKNOWN           it_802D8910
+00000014 UNKNOWN           it_802D8984
+00000018 UNKNOWN           it_802D8A54
+0000001c UNKNOWN           it_802D8CC8
+00000024 UNKNOWN           it_802D8DB4
+00000028 UNKNOWN           it_802D8DBC
+0000002c UNKNOWN           it_802D8E44
+00000034 UNKNOWN           it_802D8E4C
+00000038 UNKNOWN           it_802D8E54
+0000003c UNKNOWN           it_802D8EA4
+00000044 UNKNOWN           it_802D9274
+00000048 UNKNOWN           it_802D9384
+0000004c UNKNOWN           it_802D95F4
+```
 
 ## Misc behavior
 

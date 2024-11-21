@@ -2,7 +2,7 @@
 title: Decomp Intro (Melee)
 description: 
 published: true
-date: 2024-11-19T18:33:28.731Z
+date: 2024-11-21T17:29:55.906Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-19T18:33:28.731Z
@@ -281,7 +281,7 @@ The next step, which is where we are today, is to produce C code that compiles i
 
 Your biggest ally when it comes to completing a game's decomp besides the general community is going to be the tooling built by talented individuals in that community around that game/platform. You've already learned about one such example with dtk, which deals with the splitting and symbols stage, and you've probably at least seen decomp.me, which deals with compiling C code and comparing the resulting object file with the one to match. I'll briefly mention some other relevant tools before going into detail on [decomp.me](https://decomp.me):
 - [m2c](https://github.com/matt-kempster/m2c)
-    - The C decompiler that decomp.me runs behind the scenes when you first create a scratch or hit the "Decompile" button. It supports compilers for both the MIPS architecture (used by the N64) and the PowerPC architecture.
+    - The C decompiler that decomp.me runs behind the scenes when you first create a scratch or hit the "Decompile" button in decomp.me. It supports compilers for both the MIPS architecture (used by the N64) and the PowerPC architecture.
 - [objdiff](https://github.com/encounter/objdiff)
     - A UI and CLI tool that allows the quick comparison of symbols, instructions, and other data sections between two object files, basically a more complete version of the righthand UI from decomp.me.
 - [dtk-template](https://github.com/encounter/dtk-template)
@@ -289,4 +289,6 @@ Your biggest ally when it comes to completing a game's decomp besides the genera
 - [Ghidra](https://github.com/NationalSecurityAgency/ghidra) and [IDA](https://hex-rays.com/)
     - Two IDE-like tools for reverse engineering, used in a fair bit of decomps.
 
-(to be continued)
+To get started in decomp.me, click the "Start decomping" button, select the Gamecube/Wii platform, and select the Super Smash Bros. Melee preset. You'll notice that this automatically selects the Metrowerks 1.2.5n compiler, and it also implicitly sets the compiler flags to be what the Melee devs are believed to have used, which you can view on the next screen. The two inputs required for the decompiler to function are:
+1. Assembly files to decompile. These are typically produced with a tool like dtk as explained [here](#the-decomp-process) and already have information such as where functions begin and end to feed to the decompiler. 
+

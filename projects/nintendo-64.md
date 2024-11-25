@@ -2,7 +2,7 @@
 title: N64
 description: 
 published: true
-date: 2024-11-25T18:54:40.812Z
+date: 2024-11-25T20:37:42.916Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T18:54:40.812Z
@@ -48,10 +48,10 @@ The N64 decomp community is arguably one of the most mature, with a huge diversi
 - Quest 64
 - Rocket: Robot on Wheels
 - Snowboard Kids
-- Space Station Silicon Valley
+- Space Station Silicon Valley[space-station-silicon-valley](/projects/nintendo-64/space-station-silicon-valley)
 - Star Fox 64
 - Super Mario 64
-- Super Smash Bros.
+- Super Smash Bros.[super-smash-bros-melee](/projects/nintendo-64/super-smash-bros-melee)
 - Superman 64
 - The Legend of Zelda: Ocarina of Time
 - The Legend of Zelda: Majora's Mask

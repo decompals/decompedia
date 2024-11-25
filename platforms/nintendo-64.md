@@ -2,7 +2,7 @@
 title: Nintendo 64
 description: 
 published: true
-date: 2024-10-19T20:37:13.809Z
+date: 2024-11-25T18:45:06.827Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:09:51.070Z
@@ -48,7 +48,7 @@ The Nintendo 64 decomp community is arguably one of the most mature, with a huge
 - Quest 64
 - Rocket: Robot on Wheels
 - Snowboard Kids
-- Space Station Silicon Valley
+- [Space Station Silicon Valley](/projects/nintendo-64/Space Station Silicon Valley)
 - Star Fox 64
 - Super Mario 64
 - Super Smash Bros.

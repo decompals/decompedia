@@ -2,7 +2,7 @@
 title: GameCube & Wii
 description: 
 published: true
-date: 2024-11-04T15:36:10.189Z
+date: 2024-11-26T17:50:13.165Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:34:00.052Z
@@ -16,32 +16,32 @@ While newer than Nintendo 64 decompilation, GameCube & Wii decompilation is fair
 
 ## Projects
 
-- [Animal Crossing](/projects/animal-crossing)
-- [Kirby's Epic Yarn](/projects/kirbys-epic-yarn)
-- [Mario Kart Wii](/projects/mario-kart-wii)
-- [Mario Kart: Double Dash!!](/projects/double-dash)
-- [Mario Party 4](/projects/mario-party-4)
-- [Metroid Prime](/projects/metroid-prime)
-- [Metroid Prime 2: Echoes](/projects/metroid-prime-2)
-- [N64 Emulator for GameCube](/projects/n64-emulator-for-gamecube)
-- [New Super Mario Bros. Wii](/projects/new-super-mario-bros-wii)
-- [Paper Mario: The Thousand Year Door](/projects/thousand-year-door)
-- [Pikmin](/projects/pikmin)
-- [Pikmin 2](/projects/pikmin-2)
-- [SpongeBob SquarePants: Battle for Bikini Bottom](/projects/battle-for-bikini-bottom)
-- [Super Mario Galaxy](/projects/super-mario-galaxy)
-- [Super Mario Sunshine](/projects/super-mario-sunshine)
-- [Super Monkey Ball](/projects/super-monkey-ball)
-- [Super Paper Mario](/projects/super-paper-mario)
-- [Super Smash Bros. Melee](/projects/super-smash-bros-melee)
-- [The Legend of Zelda: Skyward Sword](/projects/skyward-sword)
-- [The Legend of Zelda: The Wind Waker](/projects/wind-waker)
-- [The Legend of Zelda: Twilight Princess](/projects/twilight-princess)
-- [Ty the Tasmanian Tiger](/projects/ty-the-tasmanian-tiger)
-- [Wii Menu](/projects/wii-menu)
-- [Wii Party](/projects/wii-party)
-- [Wii Sports](/projects/wii-sports)
-- [Xenoblade](/projects/xenoblade)
+- [Animal Crossing](/projects/gamecube-wii/animal-crossing)
+- [Kirby's Epic Yarn](/projects/gamecube-wii/kirbys-epic-yarn)
+- [Mario Kart Wii](/projects/gamecube-wii/mario-kart-wii)
+- [Mario Kart: Double Dash!!](/projects/gamecube-wii/double-dash)
+- [Mario Party 4](/projects/gamecube-wii/mario-party-4)
+- [Metroid Prime](/projects/gamecube-wii/metroid-prime)
+- [Metroid Prime 2: Echoes](/projects/gamecube-wii/metroid-prime-2)
+- [N64 Emulator for GameCube](/projects/gamecube-wii/n64-emulator-for-gamecube)
+- [New Super Mario Bros. Wii](/projects/gamecube-wii/new-super-mario-bros-wii)
+- [Paper Mario: The Thousand Year Door](/projects/gamecube-wii/thousand-year-door)
+- [Pikmin](/projects/gamecube-wii/pikmin)
+- [Pikmin 2](/projects/gamecube-wii/pikmin-2)
+- [SpongeBob SquarePants: Battle for Bikini Bottom](/projects/gamecube-wii/battle-for-bikini-bottom)
+- [Super Mario Galaxy](/projects/gamecube-wii/super-mario-galaxy)
+- [Super Mario Sunshine](/projects/gamecube-wii/super-mario-sunshine)
+- [Super Monkey Ball](/projects/gamecube-wii/super-monkey-ball)
+- [Super Paper Mario](/projects/gamecube-wii/super-paper-mario)
+- [Super Smash Bros. Melee](/projects/gamecube-wii/super-smash-bros-melee)
+- [The Legend of Zelda: Skyward Sword](/projects/gamecube-wii/skyward-sword)
+- [The Legend of Zelda: The Wind Waker](/projects/gamecube-wii/wind-waker)
+- [The Legend of Zelda: Twilight Princess](/projects/gamecube-wii/twilight-princess)
+- [Ty the Tasmanian Tiger](/projects/gamecube-wii/ty-the-tasmanian-tiger)
+- [Wii Menu](/projects/gamecube-wii/wii-menu)
+- [Wii Party](/projects/gamecube-wii/wii-party)
+- [Wii Sports](/projects/gamecube-wii/wii-sports)
+- [Xenoblade](/projects/gamecube-wii/xenoblade)
 
 ## Libraries
 

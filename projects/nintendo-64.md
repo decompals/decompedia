@@ -1,8 +1,8 @@
 ---
-title: N64
+title: Nintendo 64
 description: 
 published: true
-date: 2024-11-25T20:37:42.916Z
+date: 2025-01-02T21:42:42.773Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T18:54:40.812Z

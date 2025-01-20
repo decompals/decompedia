@@ -2,7 +2,7 @@
 title: IDO
 description: 
 published: true
-date: 2024-11-25T18:43:22.157Z
+date: 2025-01-20T01:50:15.092Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T18:43:22.157Z
@@ -34,6 +34,7 @@ The following is a list of known projects that use this compiler:
 * Banjo-Tooie
 * Chameleon Twist
 * Chameleon Twist 2
+* Dinosaur Planet
 * IDO (IDO Decomp)
 * libultra
 * Mischief Makers

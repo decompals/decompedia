@@ -1,8 +1,8 @@
 ---
 title: Dinosaur Planet
-description: 
+description: A cancelled Nintendo 64 game by Rare.
 published: true
-date: 2025-01-20T01:45:15.298Z
+date: 2025-01-20T01:52:30.833Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-20T01:29:52.212Z

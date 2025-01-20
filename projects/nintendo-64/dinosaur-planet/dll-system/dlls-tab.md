@@ -2,14 +2,14 @@
 title: DLLS.tab
 description: 
 published: true
-date: 2025-01-20T01:36:08.999Z
+date: 2025-01-20T01:41:32.997Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-20T01:36:08.999Z
 ---
 
 # DLLS.tab
-The DLLS.tab file contains a table listing the regions of [DLLS.bin](/projects/nintendo-64/dinosaur-planet/dll-format) that contain each DLL as well as the `.bss` size of each DLL.
+The DLLS.tab file contains a table listing the regions of [DLLS.bin](/projects/nintendo-64/dinosaur-planet/dll-system/dll-format) that contain each DLL as well as the `.bss` size of each DLL.
 
 ## Header
 The file starts with a header as follows:

@@ -2,7 +2,7 @@
 title: Dinosaur Planet
 description: 
 published: true
-date: 2025-01-20T01:29:52.212Z
+date: 2025-01-20T01:45:15.298Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-20T01:29:52.212Z
@@ -15,3 +15,6 @@ dateCreated: 2025-01-20T01:29:52.212Z
 Links:
 - [Dinosaur Planet Decompilation](https://github.com/zestydevy/dinosaur-planet)
 - [Dinosaur Planet: Recompiled](https://github.com/Francessco121/dino-recomp)
+
+## DLL System
+Instead of a traditional overlay system, Dinosaur Planet makes use of DLLs that can be loaded and relocated to anywhere in memory at runtime. See [DLL System](/projects/nintendo-64/dinosaur-planet/dll-system) for more information.

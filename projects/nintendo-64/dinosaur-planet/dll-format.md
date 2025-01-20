@@ -2,14 +2,14 @@
 title: DLL Format
 description: Dinosaur Planet's custom DLL format.
 published: true
-date: 2025-01-20T01:32:52.043Z
+date: 2025-01-20T01:38:17.013Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-20T01:32:52.042Z
 ---
 
 # DLL Format
-Each DLL is found inside of DLLS.bin. The file itself does not contain a header or a way to locate a DLL inside. Instead, the individual DLLs can be located by using the information in DLLS.tab which contains offsets for this file.
+Each DLL is found inside of DLLS.bin. The file itself does not contain a header or a way to locate a DLL inside. Instead, the individual DLLs can be located by using the information in [DLLS.tab](/projects/nintendo-64/dinosaur-planet/dlls-tab) which contains offsets for this file.
 
 An individual DLL contains the following:
 
@@ -63,7 +63,7 @@ The start of `.rodata` is always the global offset table. Before relocation, thi
 
 | Offset | Name | Type | Description |
 |--------|------|------|-------------|
-| 0x0 | gotEntry[0] | u32 | If the 32nd bit is set (0x80000000), a DLLSIMPORT.tab index, otherwise a byte offset from `.text` to the symbol.
+| 0x0 | gotEntry[0] | u32 | If the 32nd bit is set (0x80000000), a [DLLSIMPORT.tab](/projects/nintendo-64/dinosaur-planet/dlls-import-tab) index, otherwise a byte offset from `.text` to the symbol.
 | ... | ... | ... | ... |
 | - | - | - | 0xFFFF_FFFE |
 

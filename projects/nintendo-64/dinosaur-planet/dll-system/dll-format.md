@@ -2,7 +2,7 @@
 title: DLL Format
 description: 
 published: true
-date: 2025-01-20T01:42:08.613Z
+date: 2025-01-21T08:37:46.960Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-20T01:32:52.042Z
@@ -61,9 +61,15 @@ The `.rodata` section is special as it contains not only the DLL's readonly data
 ### Global Offset Table
 The start of `.rodata` is always the global offset table. Before relocation, this is a list of byte offsets from `.text` for local symbols and DLLSIMPORT.tab indexes for external symbols. After relocation, this is a list of absolute VRAM addresses to each symbol. The GOT is terminated by `0xFFFF_FFFE`.
 
+The first four GOT entries are always for `.text`, `.rodata`, `.data`, and `.bss` in that order. If a section is not present, its GOT entry will simply point to the start of the next section as if it had a size of zero.
+
 | Offset | Name | Type | Description |
 |--------|------|------|-------------|
-| 0x0 | gotEntry[0] | u32 | If the 32nd bit is set (0x80000000), a [DLLSIMPORT.tab](/projects/nintendo-64/dinosaur-planet/dll-system/dlls-import-tab) index, otherwise a byte offset from `.text` to the symbol.
+| 0x0 | textOffset | u32 | Byte offset from `.text` to `.text`... always zero. |
+| 0x4 | rodataOffset | u32 | Byte offset from `.text` to `.rodata`. |
+| 0x8 | dataOffset | u32 | Byte offset from `.text` to `.data`. |
+| 0xC | bssOffset | u32 | Byte offset from `.text` to `.bss`. |
+| 0x10 | gotEntry[4] | u32 | If the 32nd bit is set (0x80000000), a [DLLSIMPORT.tab](/projects/nintendo-64/dinosaur-planet/dll-system/dlls-import-tab) index, otherwise a byte offset from `.text` to the symbol.
 | ... | ... | ... | ... |
 | - | - | - | 0xFFFF_FFFE |
 

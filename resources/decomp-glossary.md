@@ -2,7 +2,7 @@
 title: Decomp Glossary
 description: 
 published: true
-date: 2025-01-21T19:33:04.825Z
+date: 2025-01-21T19:34:20.580Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-19T17:56:47.312Z
@@ -41,7 +41,7 @@ typedef unsigned long long u64;
 
 ## Compiler behavior
 
-see [here](glossary/compiler-behavior)
+see [here](/resources/glossary/compiler-behavior)
 
 ## Melee-specific behavior
 

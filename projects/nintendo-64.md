@@ -2,7 +2,7 @@
 title: Nintendo 64
 description: 
 published: true
-date: 2025-01-02T21:42:42.773Z
+date: 2025-01-22T06:37:24.976Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T18:54:40.812Z
@@ -24,7 +24,7 @@ The N64 decomp community is arguably one of the most mature, with a huge diversi
 - Chameleon Twist 2
 - Conker's Bad Fur Day
 - Diddy Kong Racing
-- Dinosaur Planet
+- [Dinosaur Planet](/projects/nintendo-64/dinosaur-planet)
 - Donkey Kong 64
 - Doom 64
 - Dr. Mario 64

@@ -2,7 +2,7 @@
 title: DLL Format
 description: 
 published: true
-date: 2025-01-21T08:37:46.960Z
+date: 2025-01-22T16:35:00.243Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-20T01:32:52.042Z
@@ -34,13 +34,14 @@ A DLL file starts with a header. The header lists offsets to each section, the n
 ## Exports
 Following the header is the DLL's export table. This defines the "public interface" of the DLL, allowing outside code to invoke functions inside of the DLL through the export table.
 
-Before the actual export entries is a single 32-bit number with a currently unknown purpose. It's typically zero. After that is a list of export table entries, with a length of `exportCount` from the header.
+Before and after the actual export entries are a 32-bit number with a currently unknown purpose, always with the value of zero. In between is a list of export table entries, with a length of `exportCount` from the header.
 
 | Offset | Name | Type | Description |
 |--------|------|------|-------------|
-| 0x18 | unknown | u32 | Unknown. |
+| 0x18 | unknown1 | u32 | 0x0 |
 | 0x1C | exportOffset[0] | u32 | Byte offset from `.text` to the exported function. |
 | ... | ... | ... | ... |
+| - | unknown2 | u32 | 0x0 |
 
 ## .text Section
 The DLL's `.text` section contains all of the DLL's executable code. This is position-independent code (PIC) making use of the `$gp` register. After a DLL is relocated, each function (that needs it) starts by setting the `$gp` register to the current address of the DLL's global offset table . This allows the function to reference other functions and data outside of the function in a position-independent way.

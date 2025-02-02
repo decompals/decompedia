@@ -2,28 +2,32 @@
 title: IDO
 description: 
 published: true
-date: 2025-01-20T01:50:15.092Z
+date: 2025-02-02T11:20:49.135Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T18:43:22.157Z
 ---
 
-IDO (IRIS Development Option) by SGI was used by developers that developed games on SGI hardware (e.g. Rare, DMA).
+IDO (IRIS Development Option) by SGI was used by developers creating games on SGI hardware, including studios like Rare and DMA.
 
-Whilst there are many versions of IDO, at the time of writing, only **2** versions appear to have been used for N64 development; IDO 5.3 and IDO 7.1.
+While multiple versions of IDO exist, only **two** versions appear to have been used for N64 development: **IDO 5.3** and **IDO 7.1**.
 
 ## Running IDO
-Because IDO is a compiler written for the IRIX platform, it does not run on modern development computers. For early decomp projects like SM64 and most of OOT, IDO was run through [qemu](https://www.qemu.org/), an emulation layer. However, the overhead of qemu was slow, it required development of a separate fork of qemu, and it only worked on Linux and MacOS. 
+Since IDO is a compiler designed for the IRIX platform, it does not run natively on modern machines. Early decompilation projects, such as *Super Mario 64* and most of *Ocarina of Time*, relied on running IDO through [QEMU](https://www.qemu.org/), an emulation layer. However, this approach had several drawbacks:  
+
+- **Slow execution** due to emulation overhead  
+- **Limited platform support**, as it only worked on Linux and macOS  
+- **Additional maintenance**, requiring a custom fork of QEMU  
 
 ### Recomp
-Later on, community member Emil began working on statically recompiling IDO, which yielded a faster executable that could be run on any modern system. This project eventually became mature enough to the point that it is the main way of running IDO for most projects today.
+To improve performance and portability, community member **Emil** began working on statically recompiling IDO ("recomp"). This effort produced a significantly faster executable that could be compiled to run on any modern system. Today, this recompiled version is the primary way IDO is used in most decompilation projects.  
 
-The recomp project can be found [here](https://github.com/decompals/ido-static-recomp), and releases available [here](https://github.com/decompals/ido-static-recomp/releases).
+The recomp project can be found [here](https://github.com/decompals/ido-static-recomp), with releases available [here](https://github.com/decompals/ido-static-recomp/releases).  
 
 ### Decomp
-The "holy grail" of understanding and being able to recompile a binary is to decompile it, and that holds true for IDO. An effort to decompile IDO has begun. A notable difference in this decomp compared to others is that, despite much of the compiler being written in C, there is a fair amount of Pascal as well. This probably is the first matching decomp project for Pascal.
+The "holy grail" of reverse engineering a binary is full decompilation, and that applies to IDO as well. A decompilation effort is currently underway. Unlike most other decompilation projects, a significant portion of IDO is written in **Pascal**, alongside C. This makes it one of the first matching decompilation projects for Pascal.  
 
-The matching decomp project can be found [here](https://github.com/decompals/ido-matching-decomp).
+The matching decompilation project can be found [here](https://github.com/decompals/ido-matching-decomp).
 
 ## Projects using this compiler
 

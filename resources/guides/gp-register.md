@@ -2,7 +2,7 @@
 title: The $gp register
 description: gp-register
 published: true
-date: 2025-01-29T15:17:48.716Z
+date: 2025-02-02T11:13:43.457Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-29T15:17:48.716Z
@@ -33,6 +33,15 @@ lw   $v1, 0x1234($gp)  # Load from an offset within the small data section
 ```  
 
 This works because `$gp` is conventionally initialized to a fixed memory location, typically near the middle of the **small data section**, allowing efficient access to variables within ±32 KB (commonly ±0x8000 bytes).  
+
+## Determining initial value of `$gp`
+
+The value for `$gp` is set in the entrypoint for the game, it will look something like this:
+```assembly
+/* A7738 800B7138 0E801C3C */  lui        $gp, (0x800E0000 >> 16)
+/* A773C 800B713C 90409C27 */  addiu      $gp, $gp, 0x4090
+```
+In this example the `$gp` register is initialised to `0x800E4090`.
 
 ## Compiler Usage of `$gp`  
 To instruct the compiler to use `$gp`, a flag is used:  

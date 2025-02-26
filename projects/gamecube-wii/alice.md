@@ -2,7 +2,7 @@
 title: Alice in Wonderland (2010)
 description: 
 published: true
-date: 2025-02-26T09:08:12.058Z
+date: 2025-02-26T09:09:24.301Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-13T18:38:01.331Z
@@ -21,9 +21,9 @@ There is no debug information in any version of the game.
 - nw4hbm
 - Revolution SDK
 - Much Engine code is shared or similar to those used in other Wii games by ELB
-	- Asterix and Obelix at the Olympic Games (released before Alice)
-	- The Legend of Spyro: Dawn of the Dragon (released before Alice)
-  - How to Train your Dragon (released around same time as Alice)
+	- Asterix and Obelix at the Olympic Games (November 2007)
+	- The Legend of Spyro: Dawn of the Dragon (October 2008)
+  - How to Train your Dragon (March 2010)
 
 # External Links
 [Decomp Github Repository](https://github.com/Alice-2010/Decomp)

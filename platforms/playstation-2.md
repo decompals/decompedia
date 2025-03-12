@@ -2,7 +2,7 @@
 title: PS2
 description: 
 published: true
-date: 2024-12-07T10:06:22.440Z
+date: 2025-03-12T04:04:00.941Z
 tags: platforms
 editor: markdown
 dateCreated: 2024-12-07T10:06:22.440Z
@@ -15,6 +15,7 @@ dateCreated: 2024-12-07T10:06:22.440Z
 - Ico
 - Kingdom Hearts
 - PaRappa the Rapper 2
+- Resident Evil: Code: Veronica X
 - Shadow of the Colossus
 - Sly Cooper and the Thievius Raccoonus
 - Treasure Planet

@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2024-11-05T08:53:46.020Z
+date: 2025-03-15T11:06:57.116Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -51,7 +51,7 @@ As mentioned above, much of our knowledge about Skyward Sword's code comes from 
 * Big Brain Academy has a linker map file
   * Semi-active [decomp project](https://github.com/vabold/bba-wd)
 * Tokyo Friend Park II - Ketteiban has full DWARF debug info
-* [The Wind Waker](/projects/wind-waker) and [Twilight Princess](/projects/twilight-princess) are earlier entries in the series for similar hardware
+* [The Wind Waker](/projects/gamecube-wii/wind-waker) and [Twilight Princess](/projects/gamecube-wii/twilight-princess) are earlier entries in the series for similar hardware
   * Collision code is lifted straight from TP
   * Various graphics code resembles code found there
   * Code found in cLib, mLib, sLib can sometimes be found in TWW/TP SComponent or mLib

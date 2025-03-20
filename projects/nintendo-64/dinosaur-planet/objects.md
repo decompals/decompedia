@@ -2,7 +2,7 @@
 title: Objects
 description: 
 published: true
-date: 2025-03-20T21:24:23.689Z
+date: 2025-03-20T21:32:41.421Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-20T21:24:23.689Z
@@ -10,8 +10,13 @@ dateCreated: 2025-03-20T21:24:23.689Z
 
 ## Dinosaur Planet Object Listing
 
-All object definitions sorted by ID (`OBJINDEX.bin` index).
+All object definitions sorted by ID.
 
+Also see this listing grouped:
+- [by DLL](/projects/nintendo-64/dinosaur-planet/objects/by-dll)
+- [by object group](/projects/nintendo-64/dinosaur-planet/objects/by-group)
+
+Glossary:
 - ID: `OBJINDEX.bin` index, the number used in game code to refer to a specific object definition.
 - Tab Idx: `OBJECTS.tab` index, the table entry specifying the file offset of the definition in `OBJECTS.bin`.
 - DLL #: 1-based index of `DLLS.tab`

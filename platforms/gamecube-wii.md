@@ -2,7 +2,7 @@
 title: GameCube & Wii
 description: 
 published: true
-date: 2024-11-26T17:50:13.165Z
+date: 2025-03-21T22:13:38.770Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:34:00.052Z
@@ -28,6 +28,7 @@ While newer than Nintendo 64 decompilation, GameCube & Wii decompilation is fair
 - [Paper Mario: The Thousand Year Door](/projects/gamecube-wii/thousand-year-door)
 - [Pikmin](/projects/gamecube-wii/pikmin)
 - [Pikmin 2](/projects/gamecube-wii/pikmin-2)
+- [Rock Band 3](/platforms/gamecube-wii/rock-band-3)
 - [SpongeBob SquarePants: Battle for Bikini Bottom](/projects/gamecube-wii/battle-for-bikini-bottom)
 - [Super Mario Galaxy](/projects/gamecube-wii/super-mario-galaxy)
 - [Super Mario Sunshine](/projects/gamecube-wii/super-mario-sunshine)

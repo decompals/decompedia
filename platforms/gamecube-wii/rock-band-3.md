@@ -1,8 +1,8 @@
 ---
 title: Rock Band 3
-description: 
+description: Info about the Rock Band 3 Decompilation
 published: true
-date: 2025-03-21T22:23:59.913Z
+date: 2025-03-21T22:50:53.957Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-21T21:59:10.330Z

@@ -2,14 +2,15 @@
 title: Rock Band 3
 description: 
 published: true
-date: 2025-03-21T22:06:45.681Z
+date: 2025-03-21T22:10:11.671Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-21T21:59:10.330Z
 ---
 
 ## About
-Your content here
+This is a reverse engineering project aimed at producing a functionally equivalent decompilation of the Wii version of Rock Band 3. It currently focuses on decompiling the September 1st, 2010 (Bank 8) prototype of the game.
+The repository can be found [here](https://github.com/DarkRTA/rb3), and the progress can be tracked on [decomp.dev](https://decomp.dev/zeldaret/ss).
 
 
 ## History

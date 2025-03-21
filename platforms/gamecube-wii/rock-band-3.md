@@ -2,7 +2,7 @@
 title: Rock Band 3
 description: 
 published: true
-date: 2025-03-21T21:59:10.330Z
+date: 2025-03-21T22:06:45.681Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-21T21:59:10.330Z
@@ -22,7 +22,7 @@ Your content here
 * Feburary 17th, 2024: The RVT-H Wii arrives and is dumped and the contents get released. There are 5 beta builds on there, All with some form of symbol information.
 * Feburary 18th, 2024: The decompilation gets reset to shift the decomp onto the September 1st, 2010 prototype found on the wii.
 * August 21st, 2024: Percentage tracking gets changed from linked code to fully matched functions. This boosts the percent from 6% to 17.50% 
-* March 14th, 2025: MattKC releases a video about the decompilation.
+* March 14th, 2025: MattKC releases a [video](https://youtu.be/WdJ-Hqx3rNw?si=HZjPJ02zrPDmsWGr) about the decompilation.
 * March 18th, 2025: The decompilation hits 50% fully matched functions.
 
 ## Libraries Used
@@ -31,6 +31,9 @@ Your content here
 * [zlib](https://github.com/madler/zlib)
 * Quazal
 * [STLport](https://github.com/LiveMirror/stlport)
+*	[Vorbis](https://github.com/xiph/vorbis)
+* [Speex](https://gitlab.xiph.org/xiph/speex)
+* [Json-C](https://github.com/json-c/json-c)
 
 
 ## Resources

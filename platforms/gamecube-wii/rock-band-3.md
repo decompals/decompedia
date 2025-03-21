@@ -2,7 +2,7 @@
 title: Rock Band 3
 description: Info about the Rock Band 3 Decompilation
 published: true
-date: 2025-03-21T22:50:53.957Z
+date: 2025-03-21T23:33:54.174Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-21T21:59:10.330Z
@@ -31,7 +31,7 @@ The repository can be found [here](https://github.com/DarkRTA/rb3), and the prog
 * [Bink](https://www.radgametools.com/bnkmain.htm)
 * [zlib](https://github.com/madler/zlib)
 * Quazal
-* [STLport](https://github.com/LiveMirror/stlport)
+* [STLport](https://github.com/karottc/STLport-5.2.1)
 *	[Vorbis](https://github.com/xiph/vorbis)
 * [Speex](https://gitlab.xiph.org/xiph/speex)
 * [Json-C](https://github.com/json-c/json-c)

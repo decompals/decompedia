@@ -2,29 +2,29 @@
 title: Rock Band 3
 description: Info about the Rock Band 3 Decompilation
 published: true
-date: 2025-03-21T23:33:54.174Z
+date: 2025-03-22T02:46:14.213Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-21T21:59:10.330Z
 ---
 
 ## About
-This is a reverse engineering project aimed at producing a functionally equivalent decompilation of the Wii version of Rock Band 3. It currently focuses on decompiling the September 1st, 2010 (Bank 8) prototype of the game.
+This is a reverse engineering project aimed at producing a functionally equivalent decompilation of the Wii version of Rock Band 3. It currently focuses on decompiling the [September 1st, 2010 (Bank 8) prototype](https://hiddenpalace.org/Rock_Band_3_(Sep_1,_2010_prototype)) of the game.
 The repository can be found [here](https://github.com/DarkRTA/rb3), and the progress can be tracked on [decomp.dev](https://decomp.dev/DarkRTA/rb3).
 
 
 ## History
-* October 26th, 2010: Rock Band 3 releases.
-* September 7th, 2021: Milohax releases Guitar Hero 2 Deluxe, further popularising modding Harmonix games.
-* Janurary 9th, 2022: MiloHax begins work on Rock Band 3 Deluxe, a mod that adds quality of life additions through the games scripting system. 
-* May 4th, 2022: RB3Enhanced begins work on reverse engineering in order to add quality of Life additions.
-* September 20th, 2023: The decompilation begins on Rock Band 3 Wii.
-* Feburary 6th, 2024: pstrick1 dumps and releases a Rock Band 2 debug build from a RVT-R disc. He also provides a listing to an RVT-H development Wii with Rock Band 3 running. A group buy is setup to purchase the Wii.
-* Feburary 17th, 2024: The RVT-H Wii arrives and is dumped and the contents get released. There are 5 beta builds on there, All with some form of symbol information.
-* Feburary 18th, 2024: The decompilation gets reset to shift the decomp onto the September 1st, 2010 prototype found on the wii.
+* October 26th, 2010: Rock Band 3 is released.
+* September 7th, 2021: Milohax releases Guitar Hero 2 Deluxe, further popularizing modding Harmonix games.
+* January 9th, 2022: MiloHax begins work on Rock Band 3 Deluxe, a mod that adds quality of life features through the game's scripting system.
+* May 4th, 2022: RB3Enhanced begins work on reverse engineering in order to add quality of life features.
+* September 20th, 2023: Decompilation begins on the Wii version of Rock Band 3.
+* February 6th, 2024: pstrick1 dumps and releases a [Rock Band 2 debug build](https://hiddenpalace.org/Rock_Band_2_(Oct_6,_2008_Wii_prototype)) from a RVT-R disc. He also provides a [listing to an RVT-H development Wii with Rock Band 3 running](https://web.archive.org/web/20240206171237/https://www.ebay.com/itm/134924286068). A group buy is setup to purchase the Wii.
+* February 17th, 2024: The RVT-H Wii's contents are dumped and [released](https://hiddenpalace.org/MiloHax). There are 5 beta builds of Rock Band 3, all with some form of symbol information.
+* February 18th, 2024: The decompilation is restarted with the goal of decompiling the September 1st, 2010 prototype found on the Wii.
 * August 21st, 2024: Percentage tracking gets changed from linked code to fully matched functions. This boosts the percent from 6% to 17.50%.
 * March 14th, 2025: MattKC releases a [video](https://youtu.be/WdJ-Hqx3rNw?si=HZjPJ02zrPDmsWGr) about the decompilation.
-* March 18th, 2025: The decompilation hits 50% fully matched functions.
+* March 18th, 2025: The decompilation reaches 50% fully matched functions.
 
 ## Libraries Used
 * [Revolution SDK](/libraries/dolphin-sdk)

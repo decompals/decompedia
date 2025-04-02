@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2025-03-16T14:20:23.028Z
+date: 2025-04-02T07:22:39.547Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -74,13 +74,13 @@ Many functions will have a name like `fn_8002ECD0`. This is simply an automatica
 
 When you write code to match this function, objdiff won't know that your function is related to `fn_8002ECD0` and won't compare them. Simply clicking on `fn_8002ECD0` will allow you to choose a function implemented by you and temporarily "map" these two functions.
 
-After you have a function matched and you're reasonably certain about argument types, you'll have to make the name known to the rest of the tooling by updating `config/SOUE01/symbols.txt`. The most convenient way to do this is using the command line, which will apply all objdiff mappings in bulk:
+After you have a function matched and you're reasonably certain about argument types, you'll have to make the name known to the rest of the tooling by updating `config/SOUE01/symbols.txt` (or the relevant REL `symbols.txt`). The most convenient way to do this is using the command line, which will apply all objdiff mappings in bulk:
 
 ```sh
 python ./tools/custom/apply_objdiff_mappings.py
 ```
 
-You can also manually change symbols entry one by one by right-clicking your symbol, choosing `Copy <mangled name>`, where "mangled name" is the least readable version of the function name, and then opening the `config/SOUE01/symbols.txt` file to replace `fn_8002ECD0` with the mangled name.
+You can also manually change symbols entries one by one by right-clicking your symbol, choosing `Copy <mangled name>`, where "mangled name" is the least readable version of the function name, and then opening the `config/SOUE01/symbols.txt` file to replace `fn_8002ECD0` with the mangled name.
 
 ### Examples
 

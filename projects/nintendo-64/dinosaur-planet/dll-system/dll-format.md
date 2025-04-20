@@ -2,7 +2,7 @@
 title: DLL Format
 description: 
 published: true
-date: 2025-01-22T16:35:00.243Z
+date: 2025-04-20T23:22:12.245Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-20T01:32:52.042Z
@@ -85,7 +85,7 @@ First is a list of byte offsets from `.text` to the `$gp` prologue of each DLL f
 | ... | ... | ... | ... |
 | - | - | - | 0xFFFF_FFFD |
 
-Immediately following the `$gp` prologue relocations are the `.data` relocations. These relocations point to values in the `.data` section that need to be offset by the relocated address of the DLL. An example would be a global variable initialized to the address of one of the DLL's functions.
+Immediately following the `$gp` prologue relocations are the `.data` relocations. These relocations point to values in the `.data` section that need to be offset by the relocated address of the DLL's `.data` section. An example would be a global variable initialized to the address of another global variable.
 
 | Offset | Name | Type | Description |
 |--------|------|------|-------------|

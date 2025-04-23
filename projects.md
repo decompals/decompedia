@@ -1,8 +1,8 @@
 ---
-title: Project platforms listing
+title: Project Categories
 description: List of platforms that have decompilation projects
 published: true
-date: 2025-04-23T12:36:43.845Z
+date: 2025-04-23T12:42:27.633Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T12:35:48.958Z

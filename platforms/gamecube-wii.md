@@ -2,7 +2,7 @@
 title: GameCube & Wii
 description: 
 published: true
-date: 2025-04-23T09:16:57.586Z
+date: 2025-04-23T11:04:02.899Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:34:00.052Z
@@ -52,7 +52,7 @@ While newer than Nintendo 64 decompilation, GameCube & Wii decompilation is fair
 - [NintendoWare for Revolution](/libraries/nw4r)
 - [JSystem](/libraries/jsystem)
 - [MusyX](/libraries/musyx)
-- [Dolphin/Revolution SDK](/libraries/dolphin-sdk)
+- [Dolphin](/libraries/dolphin-sdk)/[Revolution](/libraries/dolphin-sdk) SDK
 
 ## Compilers
 

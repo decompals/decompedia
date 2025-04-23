@@ -2,14 +2,16 @@
 title: Luigi's Mansion (2001)
 description: Info about Luigi's Mansion decompilation for GameCube
 published: true
-date: 2025-04-23T10:42:24.795Z
+date: 2025-04-23T10:45:50.185Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:05:15.836Z
 ---
 
-# About the Project
-An [in-progress decompilation](https://github.com/Moddimation/YasikiDolphin) of [Luigi's Mansion](https://wikipedia.org/wiki/Luigi’s_Mansion) for the [Nintendo GameCube](https://wikipedia.org/wiki/Nintendo_GameCube).
+# About
+|-|
+[Repository](https://github.com/Moddimation/YasikiDolphin) | [Discord](https://discord.gg/hKx3FJJgrV) | [Progress](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+An in-progress decompilation of [Luigi's Mansion](https://wikipedia.org/wiki/Luigi’s_Mansion) for the [Nintendo GameCube](https://wikipedia.org/wiki/Nintendo_GameCube).
 The focus is currently laid on the Japanese release (GLMJ01), but configurations exist for all [available versions](#versions).
 
 # History

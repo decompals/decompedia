@@ -2,7 +2,7 @@
 title: GameCube & Wii
 description: 
 published: true
-date: 2025-03-21T22:13:38.770Z
+date: 2025-04-23T08:38:50.450Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:34:00.052Z
@@ -16,6 +16,7 @@ While newer than Nintendo 64 decompilation, GameCube & Wii decompilation is fair
 
 ## Projects
 
+- [Alice in Wonderland (2010)](/projects/gamecube-wii/alice)
 - [Animal Crossing](/projects/gamecube-wii/animal-crossing)
 - [Kirby's Epic Yarn](/projects/gamecube-wii/kirbys-epic-yarn)
 - [Mario Kart Wii](/projects/gamecube-wii/mario-kart-wii)

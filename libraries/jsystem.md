@@ -2,7 +2,7 @@
 title: JSystem
 description: Information about the JSystem framework used in GameCube/Wii games
 published: true
-date: 2025-04-23T11:56:56.331Z
+date: 2025-04-23T11:58:17.504Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T11:55:02.558Z
@@ -32,3 +32,10 @@ It was often updated between games, so the libraries were not alwayw consistent.
 | Luigi's Mansion               | yes           | yes            |
 | work in progress
 
+Filetypes
+---
+exe
+
+Links
+---
+https://www.youtube.com/watch?v=dQw4w9WgXcQ

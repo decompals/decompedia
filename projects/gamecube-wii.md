@@ -2,7 +2,7 @@
 title: Gamecube Wii
 description: 
 published: true
-date: 2025-04-23T12:26:38.110Z
+date: 2025-04-23T15:50:45.986Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:26:55.635Z
@@ -34,7 +34,7 @@ dateCreated: 2025-04-23T09:26:55.635Z
 - [Kirby's Epic Yarn](/projects/gamecube-wii/kirbys-epic-yarn)
 - [Mario Kart Wii](/projects/gamecube-wii/mario-kart-wii)
 - [New Super Mario Bros. Wii](/projects/gamecube-wii/new-super-mario-bros-wii)
-- [Rock Band 3](/platforms/gamecube-wii/rock-band-3)
+- [Rock Band 3](/projects/gamecube-wii/rock-band-3)
 - [Super Mario Galaxy](/projects/gamecube-wii/super-mario-galaxy)
 - [Super Paper Mario](/projects/gamecube-wii/super-paper-mario)
 - [The Legend of Zelda: Skyward Sword](/projects/gamecube-wii/skyward-sword)

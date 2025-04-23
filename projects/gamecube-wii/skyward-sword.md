@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2025-04-02T07:22:39.547Z
+date: 2025-04-23T15:52:41.892Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -46,7 +46,7 @@ As mentioned above, much of our knowledge about Skyward Sword's code comes from 
 * [New Super Mario Bros. Wii](/projects/new-super-mario-bros-wii) shares much of the core engine and libraries
   * Many [symbol names](https://rootcubed.dev/nsmbw-symbols/symbolList/) have been discovered - always worth checking
   * Also has a semi-active [decomp project](https://github.com/NSMBW-Community/NSMBW-Decomp)
-* [Wii Sports/OGWS](/projects/wii-sports) has a debug build available
+* [Wii Sports/OGWS](/projects/wii-sports) has symbols via Wii Fit U ELF and various debug assertions
   * Active [decomp project](https://github.com/kiwi515/ogws)
 * Big Brain Academy has a linker map file
   * Semi-active [decomp project](https://github.com/vabold/bba-wd)

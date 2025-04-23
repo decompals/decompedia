@@ -2,7 +2,7 @@
 title: Luigi's Mansion (2001)
 description: Info about Luigi's Mansion decompilation for GameCube
 published: true
-date: 2025-04-23T10:49:31.488Z
+date: 2025-04-23T10:53:36.646Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:05:15.836Z
@@ -14,6 +14,8 @@ dateCreated: 2025-04-23T09:05:15.836Z
 # About
 An in-progress decompilation of [Luigi's Mansion](https://wikipedia.org/wiki/Luigi’s_Mansion) for the [Nintendo GameCube](https://wikipedia.org/wiki/Nintendo_GameCube).
 The focus is currently laid on the Japanese release (GLMJ01), but configurations exist for all [available versions](#versions).
+
+There are no known symbol maps for this game, however, it does come with [RTTI](https://www.sandordargo.com/blog/2023/03/01/binary-sizes-and-rtti).
 
 # History
 <ul>

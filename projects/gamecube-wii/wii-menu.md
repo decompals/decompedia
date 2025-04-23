@@ -2,7 +2,7 @@
 title: Wii Menu
 description: Wii Menu (Version 4.3) for Nintendo Wii
 published: true
-date: 2025-04-23T12:52:58.857Z
+date: 2025-04-23T12:58:11.930Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T12:52:58.856Z
@@ -51,6 +51,8 @@ Third party
 * **eZiText** (for USA and PAL)
 * **JustSystem ATOK** (for Japan)
 * **GameSpy**
+* **Opera Browser (WWW Library)**
+  * This library is not in the executable file, but rather as a seperate RSO file.
 
 External Resources
 ==================

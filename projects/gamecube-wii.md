@@ -2,18 +2,14 @@
 title: Gamecube Wii
 description: 
 published: true
-date: 2025-04-23T12:19:48.301Z
+date: 2025-04-23T12:20:06.104Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:26:55.635Z
 ---
 
 
-<style>
-a {
-  font-feature-settings: "liga" off;
-}
-</style>
+<style> a { text-decoration: none; } </style>
 <!--This removes the link's underscores.-->
 
 ## Projects

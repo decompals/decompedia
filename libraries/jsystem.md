@@ -2,7 +2,7 @@
 title: JSystem
 description: Information about the JSystem framework used in GameCube/Wii games
 published: true
-date: 2025-04-23T11:58:17.504Z
+date: 2025-04-23T16:29:05.040Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T11:55:02.558Z
@@ -17,20 +17,7 @@ It was created for more efficient game development, containing a set of librarie
 
 The development of JSystem was finished when the Nintendo DS came out, and it kept being used for most of the first-party Nintendo games, until they slowly transitioned over to NintendoWare for Revolution(Wii) (NW4R). Newer versions of NintendoWare are still used for the newest games today.
 
-Software using JSystem
----
-- (GameCube IPL)
-- Luigi's Mansion
-- Super Mario Sunshine
-- WIP
-
-Libraries
----
-It was often updated between games, so the libraries were not alwayw consistent. Most of the structure was always kept, though.
-| Game                          | JKernel (JKR) | JSupport (JSU) |
-|-------------------------------|---------------|----------------|
-| Luigi's Mansion               | yes           | yes            |
-| work in progress
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRAEOqmuv96s3kemhYDySA26kfm8JgPLlBxqj41Jd_smX82uAWoiKboebicWWUZOpgp6cHX9eE8u5f0/pubhtml?widget=true&amp;headers=false"></iframe>
 
 Filetypes
 ---

@@ -2,7 +2,7 @@
 title: Luigi's Mansion (2001)
 description: Info about Luigi's Mansion decompilation for GameCube
 published: true
-date: 2025-04-23T09:05:15.836Z
+date: 2025-04-23T09:10:05.630Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:05:15.836Z
@@ -11,6 +11,9 @@ dateCreated: 2025-04-23T09:05:15.836Z
 # About the Project
 An [in-progress decompilation](https://github.com/Moddimation/YasikiDolphin) of [Luigi's Mansion](https://wikipedia.org/wiki/Luigi’s_Mansion) for the [Nintendo GameCube](https://wikipedia.org/wiki/Nintendo_GameCube).
 The focus is currently laid on the Japanese release (GLMJ01), but configurations exist for all [available versions](#versions).
+
+# History
+- Dec. 15 2022: Sage-of-Mirrors creates [zmansion repo on github](https://github.com/Sage-of-Mirrors/zmansion)
 
 # Versions
 | Config ID | Region | Variant | Started? | Release Date |  Build Date  | SDK Rev. |   SDK Date   |

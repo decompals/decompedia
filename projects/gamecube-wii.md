@@ -2,20 +2,11 @@
 title: Gamecube Wii
 description: 
 published: true
-date: 2025-04-23T12:24:02.864Z
+date: 2025-04-23T12:26:38.110Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:26:55.635Z
 ---
-
-
-<script>
-document.querySelectorAll("h1 a, h2 a, h3 a").forEach(link => {
-  link.style.textDecoration = "none";
-});
-</script>
-
-<!--This removes the link's underscores.-->
 
 ### GameCube Projects
 

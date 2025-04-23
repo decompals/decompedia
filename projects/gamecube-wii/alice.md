@@ -2,7 +2,7 @@
 title: Alice in Wonderland (2010)
 description: 
 published: true
-date: 2025-02-26T09:09:24.301Z
+date: 2025-04-23T09:33:03.659Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-13T18:38:01.331Z
@@ -24,6 +24,10 @@ There is no debug information in any version of the game.
 	- Asterix and Obelix at the Olympic Games (November 2007)
 	- The Legend of Spyro: Dawn of the Dragon (October 2008)
   - How to Train your Dragon (March 2010)
+  
+# Tools
+- [XXL Editor](https://github.com/Alice-2010/XXL-Editor)
+	- View and edit data within game data files (`.KWN`, `.KRV`)
 
 # External Links
 [Decomp Github Repository](https://github.com/Alice-2010/Decomp)

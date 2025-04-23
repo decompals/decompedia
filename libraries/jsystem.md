@@ -1,8 +1,8 @@
 ---
 title: JSystem
-description: Information about the JSystem used in GameCube/Wii games
+description: Information about the JSystem framework used in GameCube/Wii games
 published: true
-date: 2025-04-23T11:55:02.558Z
+date: 2025-04-23T11:55:52.256Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T11:55:02.558Z

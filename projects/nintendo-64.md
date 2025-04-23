@@ -2,16 +2,13 @@
 title: Nintendo 64
 description: 
 published: true
-date: 2025-01-22T06:37:24.976Z
+date: 2025-04-23T12:33:44.467Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T18:54:40.812Z
 ---
 
-The N64 decomp community is arguably one of the most mature, with a huge diversity of tools and projects. Most N64 games use either IDO or GCC compilers.
-
 ### Projects
-
 - AeroGauge
 - Aidyn Chronicles: The First Mage
 - Animal Forest
@@ -48,10 +45,10 @@ The N64 decomp community is arguably one of the most mature, with a huge diversi
 - Quest 64
 - Rocket: Robot on Wheels
 - Snowboard Kids
-- Space Station Silicon Valley[space-station-silicon-valley](/projects/nintendo-64/space-station-silicon-valley)
+- [Space Station Silicon Valley](/projects/nintendo-64/space-station-silicon-valley)
 - Star Fox 64
 - Super Mario 64
-- Super Smash Bros.[super-smash-bros-melee](/projects/nintendo-64/super-smash-bros-melee)
+- Super Smash Bros.
 - Superman 64
 - The Legend of Zelda: Ocarina of Time
 - The Legend of Zelda: Majora's Mask
@@ -59,57 +56,3 @@ The N64 decomp community is arguably one of the most mature, with a huge diversi
 - Virtual Pro Wrestling 2: Ōdō Keishō
 - Wave Race 64
 - Yoshi's Story
-
-### Libraries
-
-- Libultra
-- NuSys
-
-### Microcode
-
-- boot
-  - rspboot
-- gfx
-  - f3dex
-  - f3dex2
-- audio
-- jpeg decoding
-- hqvm
-
-### Compilers
-
-- IDO
-- GCC
-  - KMC
-  - EGCS
-  -SN64
-
-### Tools
-
-#### Decompilers
-
-- m2c
-- Ghidra
-
-#### Disassemblers
-
-- splat
-- spimdisasm
-
-#### Other
-
-- [asm-differ](https://github.com/simonlindholm/asm-differ) (compare assembly side by side)
-- [decomp-permuter](https://github.com/simonlindholm/decomp-permuter) (try source changes at random to fish for matches)
-- [asm-processor](https://github.com/simonlindholm/asm-processor) (splice assembly into source .c files)
-- flib
-- lfgfx
-- n64img
-- [gfxdis](https://github.com/glankk/n64/tree/master/src/gfxdis) (disassemble dlists for f3d, f3dex, ...), [libgfxd](https://github.com/glankk/libgfxd) (a programmer friendly library), [pygfxd](https://github.com/Thar0/pygfxd) (python bindings)
-
-### Resources
-
-- [n64brew.dev](https://n64brew.dev/wiki/Main_Page)
-- [hack64.net](https://hack64.net/wiki/doku.php?id#nintendo_64)
-- [en64.shoutout.wiki](http://en64.shoutwiki.com/wiki/Main_Page)
-- [M64 documentation](https://hackmd.io/opEB-OmxRa26P8h8pA-x7w)
-- [RSP Disassembler](https://bin.smwcentral.net/u/26355/N64_RSP_DISASSEMBLER.html)

@@ -2,7 +2,7 @@
 title: GameCube & Wii
 description: 
 published: true
-date: 2025-04-23T08:38:50.450Z
+date: 2025-04-23T09:16:57.586Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:34:00.052Z
@@ -19,6 +19,7 @@ While newer than Nintendo 64 decompilation, GameCube & Wii decompilation is fair
 - [Alice in Wonderland (2010)](/projects/gamecube-wii/alice)
 - [Animal Crossing](/projects/gamecube-wii/animal-crossing)
 - [Kirby's Epic Yarn](/projects/gamecube-wii/kirbys-epic-yarn)
+- [Luigi's Mansion](/projects/gamecube-wii/luigis-mansion)
 - [Mario Kart Wii](/projects/gamecube-wii/mario-kart-wii)
 - [Mario Kart: Double Dash!!](/projects/gamecube-wii/double-dash)
 - [Mario Party 4](/projects/gamecube-wii/mario-party-4)

@@ -1,8 +1,8 @@
 ---
-title: Luigi's Mansion (2001)
+title: Luigi's Mansion
 description: Info about Luigi's Mansion decompilation for GameCube
 published: true
-date: 2025-04-24T00:41:15.758Z
+date: 2025-04-24T00:41:57.988Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:05:15.836Z

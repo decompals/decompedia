@@ -2,7 +2,7 @@
 title: Luigi's Mansion (2001)
 description: Info about Luigi's Mansion decompilation for GameCube
 published: true
-date: 2025-04-24T00:38:23.416Z
+date: 2025-04-24T00:41:15.758Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:05:15.836Z
@@ -35,7 +35,8 @@ History
   <li><span style="display:inline-block; width: 110px">Dec. 18 2023</span> Sage-of-Mirrors last activity in #luigis-mansion channel</li>
   <li><span style="display:inline-block; width: 110px"><b>Dec. 12 2024</b></span> CoNesTra forks <a href="https://github.com/CoNesTra/zmansion">Sage-of-Mirrors/zmansion</a> and updates toolchain</li>
   <li><span style="display:inline-block; width: 110px"><b>Mar. 20 2024</b></span> Moddimation forks <a href="https://github.com/Moddimation/zmansion">CoNesTra/zmansion</a> </li>
-  <li><span style="display:inline-block; width: 110px"><b>Apr. 9 2025</b></span> #luigis-mansion channel is revived</li>
+  <li><span style="display:inline-block; width: 110px">Apr. 9 2025</span> #luigis-mansion channel is revived</li>
+  <li><span style="display:inline-block; width: 110px">Apr. 23 2025</span> project is back on decomp.dev</li>
 </ul>
 
 

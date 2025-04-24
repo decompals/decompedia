@@ -2,13 +2,13 @@
 title: Luigi's Mansion (2001)
 description: Info about Luigi's Mansion decompilation for GameCube
 published: true
-date: 2025-04-23T12:44:37.979Z
+date: 2025-04-24T00:38:23.416Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:05:15.836Z
 ---
 
-| [Repository](https://github.com/Moddimation/YasikiDolphin) | [Discord](https://discord.gg/hKx3FJJgrV) | [Progress](https://www.youtube.com/watch?v=dQw4w9WgXcQ) |
+| [Progress](https://decomp.dev/Moddimation/YasikiDolphin) | [Repository](https://github.com/Moddimation/YasikiDolphin) | [Discord](https://discord.gg/hKx3FJJgrV) |
 |------------------|---------|----------|
 
 An in-progress decompilation of [Luigi's Mansion](https://wikipedia.org/wiki/Luigi’s_Mansion) for the [Nintendo GameCube](https://wikipedia.org/wiki/Nintendo_GameCube).
@@ -18,14 +18,26 @@ There are no known symbol maps for this game, however, it does come with [RTTI](
 
 History
 ---
+
+### Game
+<ul>
+  <li><span style="display:inline-block; width: 110px">Aug. 24 2000</span> Presented at SpaceWorld 2000 as a tech-demo itsself</li>
+  <li><span style="display:inline-block; width: 110px">Aug. 24 2001</span> Presented at SpaceWorld 2001 as an actual game title</li>
+  <li><span style="display:inline-block; width: 110px">2001 - 2002</span> Various game releases on gamecube</li>
+  <li><span style="display:inline-block; width: 110px">Sep. 13 2018</span> 3DS port announced</li>
+  <li><span style="display:inline-block; width: 110px">Oct. 19 2018</span> 3DS port released</li>
+</ul>
+
+### Project
 <ul>
   <li><span style="display:inline-block; width: 110px">Sep. 9 2022</span> luigis-mansion channel created in discord</li>
-  <li><span style="display:inline-block; width: 110px">Dec. 15 2022</span> Sage-of-Mirrors creates <a href="https://github.com/Sage-of-Mirrors/zmansion">zmansion repo on github</a></li>
+  <li><span style="display:inline-block; width: 110px"><b>Dec. 15 2022</b></span> Sage-of-Mirrors creates <a href="https://github.com/Sage-of-Mirrors/zmansion">zmansion repo on github</a></li>
   <li><span style="display:inline-block; width: 110px">Dec. 18 2023</span> Sage-of-Mirrors last activity in #luigis-mansion channel</li>
-  <li><span style="display:inline-block; width: 110px">Dec. 12 2024</span> CoNesTra forks <a href="https://github.com/CoNesTra/zmansion">Sage-of-Mirrors/zmansion</a> and updates toolchain</li>
-  <li><span style="display:inline-block; width: 110px">Mar. 20 2024</span> Moddimation forks <a href="https://github.com/Moddimation/zmansion">CoNesTra/zmansion</a> </li>
-  <li><span style="display:inline-block; width: 110px">Apr. 9 2025</span> #luigis-mansion channel is revived</li>
+  <li><span style="display:inline-block; width: 110px"><b>Dec. 12 2024</b></span> CoNesTra forks <a href="https://github.com/CoNesTra/zmansion">Sage-of-Mirrors/zmansion</a> and updates toolchain</li>
+  <li><span style="display:inline-block; width: 110px"><b>Mar. 20 2024</b></span> Moddimation forks <a href="https://github.com/Moddimation/zmansion">CoNesTra/zmansion</a> </li>
+  <li><span style="display:inline-block; width: 110px"><b>Apr. 9 2025</b></span> #luigis-mansion channel is revived</li>
 </ul>
+
 
 Versions
 ---

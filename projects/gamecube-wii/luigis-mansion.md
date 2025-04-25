@@ -2,7 +2,7 @@
 title: Luigi's Mansion
 description: Info about Luigi's Mansion decompilation for GameCube
 published: true
-date: 2025-04-25T13:00:53.327Z
+date: 2025-04-25T13:10:01.902Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:05:15.836Z
@@ -43,14 +43,14 @@ History
 
 Versions
 ---
-| Config ID | Region | Variant | Started? | Release Date |  Build Date  | SDK Rev. |   SDK Date   |
-|-----------|--------|---------|----------|--------------|--------------|----------|--------------|
-| GLMJ01    | Japan  | Release |    Yes   | Sep. 14 2001 | Aug. 28 2001 |    37    | Jul. 19 2001 |
-| GLME01    |  USA   | Release |   [No]   | Nov. 18 2001 | Sep. 24 2001 |    37    | Jul. 19 2001 |
-| GLME01_1  |  USA   |  Demo   |    No    | Oct.    2001 | Sep. 28 2001 |    45    | Sep. 08 2001 |
-| GLMP01    | Europe |  Demo   |    No    | Mar.    2002 | Jan. 21 2002 |    49    | Dec. 17 2001 |
-| GLMP01_1  | Europe | Release |    No    | May   3 2002 | Dec. 17 2001 |    49    | Dec. 17 2001 |
-| GLMP01_2  | Europe | Release |    No    | May  17 2002 | Dec. 17 2001 |    49    | Dec. 17 2001 |
+| Config ID | Region | Variant | Started? | Release Date |  Build Date  | SDK Rev. |  SDK Build   | Apploader Build |
+|-----------|--------|---------|----------|--------------|--------------|----------|--------------|------------------|
+| GLMJ01    | Japan  | Release |    Yes   | Sep. 14 2001 | Aug. 28 2001 |    37    | Jul. 19 2001 | Apr. 04 2001 |
+| GLME01    |  USA   | Release |   [No]   | Nov. 18 2001 | Sep. 24 2001 |    37    | Jul. 19 2001 | Aug. 9 2001 |
+| GLME01_1  |  USA   |  Demo   |    No    | Oct.    2001 | Sep. 28 2001 |    45    | Sep. 08 2001 | Sep. 08 2001 |
+| GLMP01    | Europe |  Demo   |    No    | Mar.    2002 | Jan. 21 2002 |    49    | Dec. 17 2001 | Nov. 30 2001 |
+| GLMP01_1  | Europe | Release |    No    | May   3 2002 | Dec. 17 2001 |    49    | Dec. 17 2001 | Nov. 30 2001 |
+| GLMP01_2  | Europe | Release |    No    | May  17 2002 | Dec. 17 2001 |    49    | Dec. 17 2001 | Nov. 30 2001 |
 
 Libraries
 ---

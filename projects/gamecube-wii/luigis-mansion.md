@@ -2,7 +2,7 @@
 title: Luigi's Mansion
 description: Info about Luigi's Mansion decompilation for GameCube
 published: true
-date: 2025-04-25T13:12:28.585Z
+date: 2025-04-27T09:36:13.638Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:05:15.836Z
@@ -22,7 +22,7 @@ History
 ### Game
 <ul>
   <li><span style="display:inline-block; width: 110px">Aug. 24 2000</span> Presented at SpaceWorld 2000 simply as a tech-demo to show the power of the gamecube</li>
-  <li><span style="display:inline-block; width: 110px">???. ?? 2000</span> Nintendo decides to shape a full game Project out of that demo.</li>
+  <!---<li><span style="display:inline-block; width: 110px">???. ?? 2000</span> Nintendo decides to shape a full game Project out of that demo.</li>-->
   <li><span style="display:inline-block; width: 110px">Aug. 24 2001</span> Presented at SpaceWorld 2001 as an actual game title</li>
   <li><span style="display:inline-block; width: 110px">2001 - 2002</span> Various game releases on gamecube</li>
   <li><span style="display:inline-block; width: 110px">Sep. 13 2018</span> 3DS port announced</li>

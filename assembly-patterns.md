@@ -2,7 +2,7 @@
 title: Assembly Patterns
 description: 
 published: true
-date: 2025-04-27T20:47:35.791Z
+date: 2025-04-27T20:56:35.390Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-27T20:47:35.791Z
@@ -21,7 +21,7 @@ C code:
 >
 > my_array[i / 2]
 
-To index an array of 2-byte values (here, unsigned shorts), the index is multiplied by two. The code logic happens to require that the index be divided by two, first. The optimisation here does that in one step by ANDing with 0xFFFE.
+To index an array of 2-byte values (here, unsigned shorts), the index is multiplied by two. The code logic happens to require that the index be divided by two, first. The optimisation here does that in one step by ANDing with 0xFFFE (-2).
 
 ## Range check
 

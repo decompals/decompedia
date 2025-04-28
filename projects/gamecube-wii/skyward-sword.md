@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2025-04-23T15:52:41.892Z
+date: 2025-04-28T06:55:26.358Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -37,7 +37,8 @@ There is no known debug information for any Skyward Sword version, so a large pa
   * cLib | some math stuff, random numbers
   * sLib | interpolation, easing, state management
   * mLib | wrappers for NW4R's g3d and lyt, wrappers for EGG, math types
-* Code borrowed from other games, e.g. Collision code or parts of JParticle and JStudio
+* JSystem (JStudio, JParticle)
+* Code borrowed from other games, e.g. Collision code
 
 ## External Resources
 
@@ -53,7 +54,8 @@ As mentioned above, much of our knowledge about Skyward Sword's code comes from 
 * Tokyo Friend Park II - Ketteiban has full DWARF debug info
 * [The Wind Waker](/projects/gamecube-wii/wind-waker) and [Twilight Princess](/projects/gamecube-wii/twilight-princess) are earlier entries in the series for similar hardware
   * Collision code is lifted straight from TP
-  * Various graphics code resembles code found there
+  * JSystem code is very similar to TP's JSystem
+  * Various graphics code resembles code found in TWW/TP (e.g. shadows)
   * Code found in cLib, mLib, sLib can sometimes be found in TWW/TP SComponent or mLib
   * EGG is a JSystem successor
 

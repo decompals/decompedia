@@ -2,7 +2,7 @@
 title: Decomp Intro
 description: 
 published: true
-date: 2025-03-24T23:32:45.803Z
+date: 2025-04-30T11:08:43.402Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-19T18:33:28.731Z
@@ -20,11 +20,10 @@ Decompilation is somewhat unique in that it's more like a puzzle than a concrete
    - [Pong](https://youtu.be/m_jDyqcvaQU)
    - [Kilo text editor](https://viewsourcecode.org/snaptoken/kilo/index.html)
    - [A simple ray tracer](https://youtu.be/2BLRLuczykM)
-   - [Handmade Hero](https://guide.handmadehero.org/) (hardcore but very informative, do the Intro to C and approximately first two weeks)
 - CPU knowledge resources
     - [Harvard CS50](https://www.youtube.com/watch?v=LfaMVlDaQ24) (lectures 0-5)
     - [Gameboy emulator guide](https://www.youtube.com/watch?v=e87qKixKFME&list=PLVxiWMqQvhg_yk4qy2cSC3457wZJga_e5&index=1) (hardcore but very informative, also consider joining the [emulator developers Discord server](https://discord.gg/emudev))
-    - [Computer, Enhance!](https://www.computerenhance.com/p/table-of-contents) (hardcore and paid but very high quality, do Part 1)
+    - [Computer, Enhance!](https://www.computerenhance.com/p/table-of-contents) (paid but very high quality, do Part 1)
 
 __TODO__: Not sure how useful this list is, as it's biased towards what I (fox) have personally found useful. Other members ought to contribute as well.
 

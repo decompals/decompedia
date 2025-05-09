@@ -2,7 +2,7 @@
 title: decomp.dev
 description: 
 published: true
-date: 2025-05-09T05:06:55.909Z
+date: 2025-05-09T05:54:35.244Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:56:30.855Z
@@ -20,11 +20,11 @@ The source code can be found [here](https://github.com/encounter/decomp.dev).
 
 decomp.dev has an [API browser](https://decomp.dev/api) that allows you to preview all project API endpoints, as well as generate and customize progress badge images.
 
-## GitHub bot
+## GitHub app
 
-Once your project is on decomp.dev, you can install the [GitHub bot](https://github.com/apps/decomp-dev) to the repository or organization. decomp.dev will automatically comment on PRs detailing any changes. PR comments may be configured in the [management interface](https://decomp.dev/manage).
+Once your project is on decomp.dev, you can install the [GitHub app](https://github.com/apps/decomp-dev) to the repository or organization. The GitHub app allows decomp.dev to receive notifications when a GitHub Actions workflow completes, rather than polling every 5 minutes.
 
-The GitHub bot allows decomp.dev to receive notifications when a GitHub Actions workflow completes, rather than polling every 5 minutes.
+Additionally, decomp.dev will automatically comment on PRs detailing any changes. PR comments may be configured in the [management interface](https://decomp.dev/manage).
 
 ## Integration guide
 

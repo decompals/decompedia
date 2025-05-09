@@ -2,7 +2,7 @@
 title: decomp.dev
 description: 
 published: true
-date: 2025-05-09T05:05:15.679Z
+date: 2025-05-09T05:06:55.909Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:56:30.855Z
@@ -22,7 +22,7 @@ decomp.dev has an [API browser](https://decomp.dev/api) that allows you to previ
 
 ## GitHub bot
 
-Once your project is on decomp.dev, you can install the [GitHub bot](https://github.com/apps/decomp-dev) to the repository or organization. decomp.dev will automatically comment on PRs detailing any changes.
+Once your project is on decomp.dev, you can install the [GitHub bot](https://github.com/apps/decomp-dev) to the repository or organization. decomp.dev will automatically comment on PRs detailing any changes. PR comments may be configured in the [management interface](https://decomp.dev/manage).
 
 The GitHub bot allows decomp.dev to receive notifications when a GitHub Actions workflow completes, rather than polling every 5 minutes.
 

@@ -1,8 +1,8 @@
 ---
 title: decomp.dev
 description: 
-published: false
-date: 2025-05-09T05:01:58.803Z
+published: true
+date: 2025-05-09T05:02:12.493Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:56:30.855Z

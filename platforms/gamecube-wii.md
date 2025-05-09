@@ -2,20 +2,21 @@
 title: GameCube & Wii
 description: 
 published: true
-date: 2025-04-23T12:26:23.536Z
+date: 2025-05-09T05:30:01.733Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:34:00.052Z
 ---
 
-While newer than Nintendo 64 decompilation, GameCube & Wii decompilation is fairly advanced, with a variety of tools and projects. Due to the similarity of the consoles, nearly all tooling and information is shared between the two, leading to a combined community.
+The GameCube & Wii decompilation community is vibrant, with over 25 active decompilation projects. Due to the similarities of the consoles, nearly all resources and tools are shared.
 
 <h2><a href="/projects/gamecube-wii" style="text-decoration: none; color: darkblue;">Projects</a></h2>
 
 ## Resources
 
 - [GC/Wii Decompilation Discord](https://discord.gg/hKx3FJJgrV)
-
+- [dtk-template](https://github.com/encounter/dtk-template): Plug and play template for new projects
+- [decomp.dev](https://decomp.dev): Project hub and progress info
 
 ## Libraries
 

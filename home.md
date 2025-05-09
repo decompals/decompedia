@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2025-02-02T11:09:24.787Z
+date: 2025-05-09T05:09:28.330Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T19:55:57.341Z
@@ -18,7 +18,7 @@ Because matching decompilation is complex and time-consuming, dedicated communit
 
 ## Resources
 
-- [decomp.dev](https://decomp.dev) | Decompilation progress reports
+- [decomp.dev](/tools/decomp-dev) | Decompilation progress reports
 - [decomp.me](https://decomp.me) | Collaborative decompilation platform
 - [ghidra.decomp.dev](https://ghidra.decomp.dev) | Shared Ghidra server for decomp projects
 

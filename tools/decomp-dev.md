@@ -2,7 +2,7 @@
 title: decomp.dev
 description: 
 published: true
-date: 2025-05-09T05:02:12.493Z
+date: 2025-05-09T05:05:15.679Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:56:30.855Z
@@ -13,6 +13,8 @@ dateCreated: 2025-04-23T09:56:30.855Z
 [decomp.dev](https://decomp.dev) is a hub for decompilation projects focusing on progress reporting.
 
 Progress reports can be generated using [objdiff](https://github.com/encounter/objdiff), and the [protobuf schema](https://github.com/encounter/objdiff/blob/main/objdiff-core/protos/report.proto) is available to generate from your own tooling if desired.
+
+The source code can be found [here](https://github.com/encounter/decomp.dev).
 
 ## API
 

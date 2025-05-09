@@ -2,7 +2,7 @@
 title: Wii Menu
 description: Wii Menu (Version 4.3) for Nintendo Wii
 published: true
-date: 2025-04-23T12:58:11.930Z
+date: 2025-05-09T10:59:03.544Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T12:52:58.856Z
@@ -36,7 +36,6 @@ First party
 
 * **Revolution SDK**
   * The Revolution SDK seems to be recompiled on every release. For example the build date of 4.3 is `100420`, which translates to 2010/04/20, and the SDK build dates shows "Apr 20 2010".
-  * It also looks to be a pretty early SDK revision.  
 * **RevoEX**
 * **NintendoWare for Revolution**
   * The version of NintendoWare for Revolution used for the Wii Menu would later be shipped in with the HOME Menu (HBM) library under the name `nw4hbm`, along with other small parts of Wii Menu code.
@@ -57,9 +56,10 @@ Third party
 External Resources
 ==================
 
-* Decompilation projects that share a very similar SDK revision, such as [OGWS](https://github.com/kiwi515/ogws) and [Petari](https://github.com/SMGCommunity/Petari).
+* Decompilation projects that share a very similar SDK revision, such as [OGWS](https://github.com/kiwi515/ogws), [dolsdk2004](https://github.com/doldecomp/dolsdk2004) and [Petari](https://github.com/SMGCommunity/Petari).
 * Various games including a lot of information about SDKs from `.map` and `.elf` files
   * Tokyo Friend Park II - Ketteiban is the most useful one with it's huge amount of DWARF.
+  * Challenge Me -  Word (and Brain) Puzzles reveal to have `.a` files of SDK Library shipped in.
 * [BSTool](https://github.com/koopthekoopa/BSTool) for handling the Wii Menu's exectuable.
 * [WiiBrew](https://wiibrew.org/wiki/Main_Page) and [Yet Another GC Documentation](https://www.gc-forever.com/yagcd).
 

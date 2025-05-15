@@ -2,7 +2,7 @@
 title: Assembly Patterns
 description: 
 published: true
-date: 2025-04-27T20:56:35.390Z
+date: 2025-05-15T12:17:27.222Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-27T20:47:35.791Z
@@ -35,4 +35,4 @@ Assembly:
 C code:
 > if (wrk > 0xE8 && wrk < 0xF6)
 
-One might be tempted to translate this as `if (wrk - 0xE9 < 0xD)`, but this is actually an optimised check to see if the variable is between 0xE8 and 0xF6. 0xE9 is one lower than the lower bound, and 0xF6 - 0xE8 = 0xE, which is one more than the range.
+One might be tempted to translate this as `if (wrk - 0xE9 < 0xD)`, but this is actually an optimised check to see if the variable is between 0xE8 and 0xF6. 0xE9 is one higher than the lower bound, and 0xF6 - 0xE8 = 0xE, which is one more than 0xD.

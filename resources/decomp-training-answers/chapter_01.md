@@ -2,7 +2,7 @@
 title: Chapter 1 answers
 description: 
 published: true
-date: 2025-05-13T23:39:01.946Z
+date: 2025-05-17T19:06:45.033Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-13T23:39:01.946Z
@@ -11,9 +11,16 @@ dateCreated: 2025-05-13T23:39:01.946Z
 # Chapter 1 answers
 
 <details>
-  <summary>Solution to weird_func and call_weird_func</summary>
+  <summary>Hint for weird_func and call_weird_func</summary>
   
-Even though `weird_func` appears to be empty, it's actually implicitly returning its first argument at `r3`, which gets written to the pointer `int *b`. You should have been able to deduce that the second argument `r4`, which gets moved to `r31`, is a pointer since it appears on the right side of a store instruction as `0x0(r31)`, covered in the `store` function in Chapter 0. 
+Note that `r3` gets read from in `stw r3, 0x0(r31)` immediately following `bl weird_func`. What does this tell you about `weird_func`? 
+  
+</details>
+
+<details>
+  <summary>Solution and explanation of weird_func and call_weird_func</summary>
+  
+Even though `weird_func` appears to be empty, it's actually implicitly returning its first argument at `r3`, which gets written to the pointer `int *b`. Since `r3` is used by the ABI as both the first argument and the return register, no discrete move actually has to happen inside of `weird_func` and the compiler can simply write a single `blr`. You should have been able to deduce that the second argument `r4`, which gets moved to `r31`, is a pointer since it appears on the right side of a store instruction as `0x0(r31)`, covered in the `store` function in Chapter 0. 
 
 An important concept that I haven't highlighted explicitly but you could have figured out by carefully thinking about how volatile registers work is that if you see *any* read from `r3` before a write to `r3` following a function call, that function *has* to be defined as returning something, else it is not consistent with the ABI.  
 

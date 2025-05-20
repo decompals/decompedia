@@ -2,7 +2,7 @@
 title: Nintendo 64
 description: 
 published: true
-date: 2025-04-23T12:33:44.467Z
+date: 2025-05-20T15:52:03.799Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T18:54:40.812Z
@@ -12,9 +12,9 @@ dateCreated: 2024-11-25T18:54:40.812Z
 - AeroGauge
 - Aidyn Chronicles: The First Mage
 - Animal Forest
-- Banjo-Kazooie
-- Banjo-Tooie
-- Blast Corps
+- [Banjo-Kazooie] (/projects/nintendo-64/donkey-kong-64)
+- [Banjo-Tooie] (/projects/nintendo-64/donkey-kong-64)
+- [Blast Corps] (/projects/nintendo-64/blast-corps)
 - Body Harvest
 - Bomberman Hero
 - Chameleon Twist
@@ -22,7 +22,7 @@ dateCreated: 2024-11-25T18:54:40.812Z
 - Conker's Bad Fur Day
 - Diddy Kong Racing
 - [Dinosaur Planet](/projects/nintendo-64/dinosaur-planet)
-- Donkey Kong 64
+- [Donkey Kong 64] (/projects/nintendo-64/donkey-kong-64)
 - Doom 64
 - Dr. Mario 64
 - Duke Nukem: Zero Hour

@@ -2,7 +2,7 @@
 title: Nintendo 64
 description: 
 published: true
-date: 2025-05-20T15:52:03.799Z
+date: 2025-05-20T15:58:05.497Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T18:54:40.812Z
@@ -12,9 +12,9 @@ dateCreated: 2024-11-25T18:54:40.812Z
 - AeroGauge
 - Aidyn Chronicles: The First Mage
 - Animal Forest
-- [Banjo-Kazooie] (/projects/nintendo-64/donkey-kong-64)
-- [Banjo-Tooie] (/projects/nintendo-64/donkey-kong-64)
-- [Blast Corps] (/projects/nintendo-64/blast-corps)
+- [Banjo-Kazooie](/projects/nintendo-64/banjo-kazooie)
+- [Banjo-Tooie](/projects/nintendo-64/banjo-tooie)
+- [Blast Corps](/projects/nintendo-64/blast-corps)
 - Body Harvest
 - Bomberman Hero
 - Chameleon Twist
@@ -22,7 +22,7 @@ dateCreated: 2024-11-25T18:54:40.812Z
 - Conker's Bad Fur Day
 - Diddy Kong Racing
 - [Dinosaur Planet](/projects/nintendo-64/dinosaur-planet)
-- [Donkey Kong 64] (/projects/nintendo-64/donkey-kong-64)
+- [Donkey Kong 64](/projects/nintendo-64/donkey-kong-64)
 - Doom 64
 - Dr. Mario 64
 - Duke Nukem: Zero Hour
@@ -47,7 +47,7 @@ dateCreated: 2024-11-25T18:54:40.812Z
 - Snowboard Kids
 - [Space Station Silicon Valley](/projects/nintendo-64/space-station-silicon-valley)
 - Star Fox 64
-- Super Mario 64
+- Super Mario 64(/projects/nintendo-64/super-mario-64)
 - Super Smash Bros.
 - Superman 64
 - The Legend of Zelda: Ocarina of Time

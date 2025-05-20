@@ -2,7 +2,7 @@
 title: Nintendo 64
 description: 
 published: true
-date: 2025-05-20T15:58:05.497Z
+date: 2025-05-20T16:12:12.819Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T18:54:40.812Z
@@ -47,7 +47,7 @@ dateCreated: 2024-11-25T18:54:40.812Z
 - Snowboard Kids
 - [Space Station Silicon Valley](/projects/nintendo-64/space-station-silicon-valley)
 - Star Fox 64
-- Super Mario 64(/projects/nintendo-64/super-mario-64)
+- [Super Mario 64](/projects/nintendo-64/super-mario-64)
 - Super Smash Bros.
 - Superman 64
 - The Legend of Zelda: Ocarina of Time

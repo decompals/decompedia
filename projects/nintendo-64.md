@@ -2,7 +2,7 @@
 title: Nintendo 64
 description: 
 published: true
-date: 2025-05-20T16:12:12.819Z
+date: 2025-05-22T19:10:46.154Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T18:54:40.812Z
@@ -20,7 +20,7 @@ dateCreated: 2024-11-25T18:54:40.812Z
 - Chameleon Twist
 - Chameleon Twist 2
 - Conker's Bad Fur Day
-- Diddy Kong Racing
+- [Diddy Kong Racing](/projects/nintendo-64/diddy-kong-racing)
 - [Dinosaur Planet](/projects/nintendo-64/dinosaur-planet)
 - [Donkey Kong 64](/projects/nintendo-64/donkey-kong-64)
 - Doom 64
@@ -31,9 +31,9 @@ dateCreated: 2024-11-25T18:54:40.812Z
 - GoldenEye 007
 - Kirby 64: The Crystal Shards
 - Mario Kart 64
-- Mario Party
-- Mario Party 2
-- Mario Party 3
+- [Mario Party](/projects/nintendo-64/mario-party)
+- [Mario Party 2](/projects/nintendo-64/mario-party-2)
+- [Mario Party 3](/projects/nintendo-64/mario-party-3)
 - Neon Genesis Evangelion
 - Mischief Makers
 - Ogre Battle 64: Person of Lordly Caliber
@@ -44,12 +44,12 @@ dateCreated: 2024-11-25T18:54:40.812Z
 - Pokémon Stadium
 - Quest 64
 - Rocket: Robot on Wheels
-- Snowboard Kids
+- [Snowboard Kids](/projects/nintendo-64/snowboard-kids)
 - [Space Station Silicon Valley](/projects/nintendo-64/space-station-silicon-valley)
-- Star Fox 64
+- [Star Fox 64](/projects/nintendo-64/star-fox-64)
 - [Super Mario 64](/projects/nintendo-64/super-mario-64)
-- Super Smash Bros.
-- Superman 64
+- [Super Smash Bros.](/projects/nintendo-64/super-smash-bros)
+- [Superman 64](/projects/nintendo-64/superman-64)
 - The Legend of Zelda: Ocarina of Time
 - The Legend of Zelda: Majora's Mask
 - Turok 3: Shadow of Oblivion

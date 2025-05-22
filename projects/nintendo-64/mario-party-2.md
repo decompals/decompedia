@@ -2,13 +2,13 @@
 title: Mario Party 2
 description: 
 published: true
-date: 2025-05-22T22:05:50.024Z
+date: 2025-05-22T22:20:21.904Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-22T22:05:50.024Z
 ---
 
-# Mario Party
+# Mario Party 2
 
 Links:
 

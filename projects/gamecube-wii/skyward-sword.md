@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2025-05-25T18:33:03.141Z
+date: 2025-05-25T18:36:32.090Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -69,6 +69,8 @@ In particular, the Skyward Sword Randomizer community has analyzed various file 
 ## How to decompile
 
 For first-time setup, please refer to the GitHub project's [README](https://github.com/zeldaret/ss/blob/main/README.md). Some details that will be relevant after the initial setup are discussed in this section.
+
+You may additionally find the [The Wind Waker decompiling guide](https://github.com/zeldaret/tww/blob/main/docs/decompiling.md) and the [Twilight Princess contribution guide](https://zsrtp.link/contribute) useful. Not everything in there is applicable to this decomp (e.g. the references to symbol maps or debug builds can be ignored since this project has neither), but they're still good reads.
 
 ### Lack of symbols
 

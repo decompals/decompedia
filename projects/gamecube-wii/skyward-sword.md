@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2025-04-28T06:55:26.358Z
+date: 2025-05-25T18:31:43.574Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -83,6 +83,12 @@ python ./tools/custom/apply_objdiff_mappings.py
 ```
 
 You can also manually change symbols entries one by one by right-clicking your symbol, choosing `Copy <mangled name>`, where "mangled name" is the least readable version of the function name, and then opening the `config/SOUE01/symbols.txt` file to replace `fn_8002ECD0` with the mangled name.
+
+#### How to deal with `@` symbols
+
+Your decompiled file might have data labels that start with `@`. These are local anonymous symbols, they're not visible to other files, and it is NOT necessary to transfer all of them to `symbols.txt`. The exact number will also constantly change when anything in the recursively included headers is changed, since the compiler picks an arbitrary number based on many factors.
+
+If you decompile a file in the `REL` folder, something you can do is adding `scope:local` to all the lines in `symbols.txt` where the `lbl_123_456` corresponds to a `@`-symbol. This prevents some linker warnings.
 
 ### Examples
 

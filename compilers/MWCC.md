@@ -2,7 +2,7 @@
 title: MWCC
 description: Metroworks C Compiler
 published: true
-date: 2025-06-01T18:59:42.808Z
+date: 2025-06-01T19:42:39.546Z
 tags: compiler, metroworks, mwcc
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -21,3 +21,15 @@ For unstripped binaries, some versions of the linker (MWLD) may include a commen
 
 The default linker script for MWLD joins the text, data, and rodata sections into a single section called `main`. This can be an indicator that the binary may have been linked by MWLD.
 
+## Decompilation Projects using this compiler
+
+### PS2
+- Dark Cloud
+- Goin' Quackers
+- Resident Evil: Codename Veronica X
+- Shaun Palmer's Pro Snowboarder
+- Street Fighter III: Third Strike
+- Sonic CD
+
+### PSP
+- Castlevania: Symphony of the Night

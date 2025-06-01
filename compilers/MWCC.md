@@ -2,7 +2,7 @@
 title: MWCC
 description: Metroworks C Compiler
 published: true
-date: 2025-06-01T19:42:39.546Z
+date: 2025-06-01T20:54:53.989Z
 tags: compiler, metroworks, mwcc
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -33,3 +33,8 @@ The default linker script for MWLD joins the text, data, and rodata sections int
 
 ### PSP
 - Castlevania: Symphony of the Night
+
+###  Known MWCC games without a decompilation project
+
+### PS2
+- MX 2002 Featuring Ricky Charmichael: Uses MWCC and has Dwarf Debug data in SLUS_200.72

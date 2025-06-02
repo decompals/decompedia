@@ -2,7 +2,7 @@
 title: Decomp Intro
 description: 
 published: true
-date: 2025-04-30T11:08:43.402Z
+date: 2025-06-02T23:20:09.629Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-19T18:33:28.731Z
@@ -48,7 +48,7 @@ The degree to which how this "matching" is done, or in other words how accuratel
 
 To give some examples from real projects:
 
-- Compilers like MWCC for the Gamecube/Wii and IDO for the N64 generate assembly in a way that is very specific to how the code was written, or in other words, a series of 10,000 logically equivalent ways of writing the same thing may compile 10,000 different ways even with the same optimization level and other compiler flags. Some examples include:
+- Compilers like [MWCC](/compilers/MWCC) for the Gamecube/Wii and [IDO](/compilers/ido) for the N64 generate assembly in a way that is very specific to how the code was written, or in other words, a series of 10,000 logically equivalent ways of writing the same thing may compile 10,000 different ways even with the same optimization level and other compiler flags. Some examples include:
     - Casts in specific places
     - The inline keyword and what specific parts of assembly come from inlines (which has large implications on the stack size in MWCC)
     - The const keyword (MWCC)
@@ -141,7 +141,7 @@ You likely won't fully grasp these concepts if you're still new to assembly and 
 
 ### Compiling and linking
 
-When we say that a C program gets "compiled" or invoke a compiler like MWCC or MSVC or Clang or GCC, there’s actually two processes happening: a compiler *and* a linker. It may be a bit fuzzy to you even if you have C experience if you've only ever invoked both stages at the same time or only use tools like CMake or Ninja, where the actual compilation command that gets executed is hidden from you by default. For example, let's say we have a typical C/C++ project that consists of two files named `file_a.c` and `file_b.c`, and we want to compile it into an executable with gcc:
+When we say that a C program gets "compiled" or invoke a compiler like [MWCC](/compilers/MWCC) or MSVC or Clang or [GCC](/compilers/GCC), there’s actually two processes happening: a compiler *and* a linker. It may be a bit fuzzy to you even if you have C experience if you've only ever invoked both stages at the same time or only use tools like CMake or Ninja, where the actual compilation command that gets executed is hidden from you by default. For example, let's say we have a typical C/C++ project that consists of two files named `file_a.c` and `file_b.c`, and we want to compile it into an executable with gcc:
 
 ```
 gcc -o out file_a.c file_b.c

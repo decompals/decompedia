@@ -2,7 +2,7 @@
 title: MWCC
 description: Metroworks C Compiler
 published: true
-date: 2025-06-03T01:01:58.074Z
+date: 2025-06-03T01:33:06.781Z
 tags: compiler, metroworks, mwcc
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -20,6 +20,10 @@ For unstripped binaries, some versions of the linker (MWLD) may include a commen
 ### The Main Section
 
 The default linker script for MWLD joins the text, data, and rodata sections into a single section called `main`. This can be an indicator that the binary may have been linked by MWLD.
+
+## Debug Information
+### PS2
+For PS2 ELF binaries that have been compiled with debug information that has not been stripped the information is stored in a `.debug` section containing DWARF 1 format debug information.
 
 ## Decompilation Projects using this compiler
 

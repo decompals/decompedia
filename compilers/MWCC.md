@@ -2,7 +2,7 @@
 title: MWCC
 description: Metroworks C Compiler
 published: true
-date: 2025-06-03T01:33:06.781Z
+date: 2025-06-03T01:41:36.801Z
 tags: compiler, metroworks, mwcc
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -24,6 +24,9 @@ The default linker script for MWLD joins the text, data, and rodata sections int
 ## Debug Information
 ### PS2
 For PS2 ELF binaries that have been compiled with debug information that has not been stripped the information is stored in a `.debug` section containing DWARF 1 format debug information.
+
+### GC
+GameCube releases of MWCC supported generating debug information in DWARF 1 format as well as DWARF 2. DWARF 1 and 2 debug iformation is distinct in format and utilize a different structure of sections in the linked binary.
 
 ## Decompilation Projects using this compiler
 

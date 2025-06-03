@@ -2,7 +2,7 @@
 title: Assembly Patterns
 description: 
 published: true
-date: 2025-05-15T12:17:27.222Z
+date: 2025-06-03T12:21:29.147Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-27T20:47:35.791Z
@@ -33,6 +33,6 @@ Assembly:
 > bnez    v0,144
 
 C code:
-> if (wrk > 0xE8 && wrk < 0xF6)
+> if (wrk >= 0xE9 && wrk <= 0xF5)
 
-One might be tempted to translate this as `if (wrk - 0xE9 < 0xD)`, but this is actually an optimised check to see if the variable is between 0xE8 and 0xF6. 0xE9 is one higher than the lower bound, and 0xF6 - 0xE8 = 0xE, which is one more than 0xD.
+One might be tempted to translate this as `if (wrk - 0xE9 < 0xD)`, but this is actually an optimised range check. 0xE9 is the minimum. The maximum can be found by `0xE9 + 0xD - 1`.

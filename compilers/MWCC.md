@@ -2,7 +2,7 @@
 title: MWCC
 description: Metroworks C Compiler
 published: true
-date: 2025-06-01T23:23:47.993Z
+date: 2025-06-03T01:01:58.074Z
 tags: compiler, metroworks, mwcc
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -24,15 +24,15 @@ The default linker script for MWLD joins the text, data, and rodata sections int
 ## Decompilation Projects using this compiler
 
 ### PS2
-- Dark Cloud
-- Goin' Quackers
-- Resident Evil: Codename Veronica X
-- Shaun Palmer's Pro Snowboarder
-- Street Fighter III: Third Strike
-- Sonic CD
+- [Dark Cloud](https://github.com/Adubbz/DCDecomp)
+- [Goin' Quackers](https://github.com/AngheloAlf/goin_quackers)
+- [Resident Evil: Codename Veronica X](https://github.com/fmil95/recvx-decomp)
+- [Shaun Palmer's Pro Snowboarder](https://github.com/Daniel-McCarthy/SPPS)
+- [Street Fighter III: Third Strike](https://github.com/apstygo/sfiii-decomp)
+- [Sonic CD](https://git.sr.ht/~benoitren/soniccddecompilation)
 
 ### PSP
-- Castlevania: Symphony of the Night
+- [Castlevania: Symphony of the Night](https://github.com/Xeeynamo/sotn-decomp)
 
 ###  Known MWCC games without a decompilation project
 

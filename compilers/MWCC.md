@@ -2,7 +2,7 @@
 title: MWCC
 description: Metroworks C Compiler
 published: true
-date: 2025-06-03T01:53:27.752Z
+date: 2025-06-03T02:35:08.392Z
 tags: compiler, metroworks, mwcc
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -21,7 +21,7 @@ This section is not present in GameCube releases of MWCC.
 
 ### The Main Section
 
-The default linker script for MWLD joins the text, data, and rodata sections into a single section called `main`. This can be an indicator that the binary may have been linked by MWLD.
+The default linker script for PS2 MWLD joins the text, data, and rodata sections into a single section called `main`. This can be an indicator that the binary may have been linked by MWLD.
 
 ## Debug Information
 ### PS2
@@ -42,6 +42,9 @@ GameCube/Wii releases of MWCC supported generating debug information in both DWA
 
 ### PSP
 - [Castlevania: Symphony of the Night](https://github.com/Xeeynamo/sotn-decomp)
+
+### GC/Wii
+- [Spongebob Battle for Bikini Bottom](https://github.com/bfbbdecomp/bfbb)
 
 ###  Known MWCC games without a decompilation project
 

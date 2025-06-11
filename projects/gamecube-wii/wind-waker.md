@@ -2,7 +2,7 @@
 title: The Legend of Zelda: The Wind Waker
 description: 
 published: true
-date: 2024-11-04T16:44:01.165Z
+date: 2025-01-02T16:55:46.711Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T16:44:01.165Z

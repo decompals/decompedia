@@ -2,7 +2,7 @@
 title: PS2
 description: 
 published: true
-date: 2025-06-01T23:28:59.145Z
+date: 2025-06-01T23:29:00.562Z
 tags: platforms
 editor: markdown
 dateCreated: 2024-12-07T10:06:22.440Z

@@ -2,7 +2,7 @@
 title: PS1
 description: PlayStation 1
 published: true
-date: 2024-11-25T20:54:39.020Z
+date: 2024-11-25T20:54:40.746Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T20:54:39.020Z

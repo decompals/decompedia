@@ -2,7 +2,7 @@
 title: Chapter 1 answers
 description: 
 published: true
-date: 2025-05-17T21:24:20.865Z
+date: 2025-05-17T21:24:23.742Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-17T21:24:20.865Z

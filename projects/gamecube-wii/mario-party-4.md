@@ -2,7 +2,7 @@
 title: Mario Party 4
 description: 
 published: true
-date: 2025-01-01T20:55:14.301Z
+date: 2025-01-01T20:55:16.235Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-01T20:54:09.177Z

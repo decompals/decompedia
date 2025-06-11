@@ -2,7 +2,7 @@
 title: Objects (by DLL)
 description: 
 published: true
-date: 2025-03-20T21:30:32.980Z
+date: 2025-03-20T21:30:37.174Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-20T21:30:32.980Z

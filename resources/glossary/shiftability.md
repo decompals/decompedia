@@ -2,7 +2,7 @@
 title: Shiftability
 description: What shiftability is, why it is useful, and how to achieve it
 published: true
-date: 2025-05-07T03:48:43.910Z
+date: 2025-05-07T03:48:46.792Z
 tags: shiftability, glossary
 editor: markdown
 dateCreated: 2025-02-22T04:09:22.098Z

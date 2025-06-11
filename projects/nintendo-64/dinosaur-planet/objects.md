@@ -2,7 +2,7 @@
 title: Objects
 description: 
 published: true
-date: 2025-03-20T21:35:34.927Z
+date: 2025-03-20T21:35:38.065Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-20T21:24:23.689Z

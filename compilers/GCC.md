@@ -2,7 +2,7 @@
 title: GCC
 description: 
 published: true
-date: 2024-12-07T10:04:12.101Z
+date: 2024-12-07T10:04:15.056Z
 tags: compiler
 editor: markdown
 dateCreated: 2024-12-07T10:04:12.101Z

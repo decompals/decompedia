@@ -2,7 +2,7 @@
 title: So you want to decompile an N64 game
 description: a work-in-progress guide to N64 game decompilation
 published: true
-date: 2025-03-20T14:59:27.914Z
+date: 2025-03-20T14:59:30.794Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-15T11:54:09.928Z

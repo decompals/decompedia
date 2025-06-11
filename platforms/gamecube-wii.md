@@ -2,7 +2,7 @@
 title: GameCube & Wii
 description: 
 published: true
-date: 2025-05-09T05:30:01.733Z
+date: 2025-06-11T03:00:35.490Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:34:00.052Z
@@ -28,7 +28,7 @@ The GameCube & Wii decompilation community is vibrant, with over 25 active decom
 
 ## Compilers
 
-- [Metrowerks (MWCC)](/compilers/mwcc)
+- [Metrowerks (MWCC)](/compilers/MWCC)
 - [ProDG](/compilers/prodg)
 
 ## Tools

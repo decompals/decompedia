@@ -2,7 +2,7 @@
 title: The $gp register
 description: gp-register
 published: true
-date: 2025-02-02T11:13:43.457Z
+date: 2025-02-02T11:13:45.153Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-29T15:17:48.716Z

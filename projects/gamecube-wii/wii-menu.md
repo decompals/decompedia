@@ -2,7 +2,7 @@
 title: Wii Menu
 description: Wii Menu (Version 4.3) for Nintendo Wii
 published: true
-date: 2025-06-09T11:10:08.412Z
+date: 2025-10-07T12:49:12.179Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T12:52:58.856Z
@@ -27,6 +27,7 @@ History
 * **March 2024**: Started the decompilation project.
 * **October 19, 2024**: The build system now uses the [Decomp Toolkit](https://github.com/encounter/decomp-toolkit) tool.
 * **Janurary 3, 2025**: The project structure moved on to use the [Decomp Toolkit Template](https://github.com/encounter/dtk-template).
+* **September 29, 2025**: 25% of 4.3U/E was decompiled.
 
 Libraries
 =========
@@ -58,8 +59,9 @@ External Resources
 
 * Decompilation projects that share a very similar SDK revision, such as [OGWS](https://github.com/kiwi515/ogws), [dolsdk2004](https://github.com/doldecomp/dolsdk2004) and [Petari](https://github.com/SMGCommunity/Petari).
 * Various games including a lot of information about SDKs from `.map` and `.elf` files
+  * Challenge Me -  Word (and Brain) Puzzles reveal to have AR files of SDK libraries shipped in dated December 12th 2009.
+    * [Decompilation of those libraries](https://github.com/doldecomp/sdk_2009-12-11)
   * Tokyo Friend Park II - Ketteiban is the most useful one with it's huge amount of DWARF.
-  * Challenge Me -  Word (and Brain) Puzzles reveal to have `.a` and `.o` files of SDK libraries shipped in dated December 12th 2009.
 * [BSTool](https://github.com/koopthekoopa/BSTool) for handling the Wii Menu's exectuable.
 * [WiiBrew](https://wiibrew.org/wiki/Main_Page) and [Yet Another GC Documentation](https://www.gc-forever.com/yagcd).
 

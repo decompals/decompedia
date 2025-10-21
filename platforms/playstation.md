@@ -2,7 +2,7 @@
 title: PS1
 description: PlayStation 1
 published: true
-date: 2024-11-25T20:54:40.746Z
+date: 2025-10-21T16:42:03.782Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T20:54:39.020Z
@@ -12,12 +12,13 @@ dateCreated: 2024-11-25T20:54:39.020Z
 
 ## Compilers
 
-All (?) PlayStation games use flavours of the GCC compiler; typically the PSYQ toolchain from SN Systems.
+The vast majority of PlayStation games use GCC-derived compilers as this was the compiler shipped with the official toolchain (PSYQ/SDevTC), however it's not impossible for games to have used a different compiler as is the case with Tokimeki Memorial (RISCompiler/IRIX-derived compiler) or Digimon World (Codewarrior).
 
 The existing tools designed to support N64 decompilation, such as **m2c**, **asm-differ**, and **decomp-permuter**, are built to work with ELF object files. Since the PSYQ toolchain generates proprietary object files, tools have been created to convert these into standard ELF objects. Alternatively, projects like **maspsx** can be used to produce output identical to PSYQ compilers and assemblers, but natively in ELF format.
 
-- PSYQ (GCC)
-
+- PSYQ/SDevTC (GCC)
+- CodeWarrior (MWCC)
+- RISCompiler
 
 ## Tools
 

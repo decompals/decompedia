@@ -1,0 +1,149 @@
+<!--
+title: Revolution SDK
+description: System library used in Wii Games
+published: true
+date: 2025-10-24T22:18:11.374Z
+tags: 
+editor: ckeditor
+dateCreated: 2025-10-24T22:18:11.374Z
+-->
+
+<p>Revolution SDK is the low level toolchain distributed by Nintendo for Wii game and app development. Since the Wii does not boot into an operating system, this library was developed and distributed to act as an interface to the Wii's hardware. Internally it works by directly manipulating memory mapped hardware registers. Due to it being essential to doing pretty much everything, it is used in every game.<br><br>The SDK constists of various components, roughly corresponding to each piece of Wii hardware.<br>&nbsp;</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>AI</td>
+        <td>Audio Interface</td>
+      </tr>
+      <tr>
+        <td>ARC</td>
+        <td>Wii Archive Reading library</td>
+      </tr>
+      <tr>
+        <td>AX</td>
+        <td>Higher level audio interface. Handles things like different voices and ADPCM</td>
+      </tr>
+      <tr>
+        <td>AXFX</td>
+        <td>AX audio effects</td>
+      </tr>
+      <tr>
+        <td>BASE</td>
+        <td>PowerPC specific instrinsic function wrappers and useuful defines</td>
+      </tr>
+      <tr>
+        <td>BTE</td>
+        <td>Bluetooth interface</td>
+      </tr>
+      <tr>
+        <td>CARD</td>
+        <td>Gamecube memory card support</td>
+      </tr>
+      <tr>
+        <td>CX</td>
+        <td>Compression library</td>
+      </tr>
+      <tr>
+        <td>DB</td>
+        <td>Debugger Interface</td>
+      </tr>
+      <tr>
+        <td>DVD</td>
+        <td>DVD Interface</td>
+      </tr>
+      <tr>
+        <td>ENC</td>
+        <td>Character Encoding library</td>
+      </tr>
+      <tr>
+        <td>ESP</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>EXI</td>
+        <td>External Interface (Gamecube memory card slot communication protocol) library</td>
+      </tr>
+      <tr>
+        <td>FNT</td>
+        <td>Font Support</td>
+      </tr>
+      <tr>
+        <td>FS</td>
+        <td>Filesystem library</td>
+      </tr>
+      <tr>
+        <td>GX</td>
+        <td>2D and 3D Graphics API. Graphics Processor library</td>
+      </tr>
+      <tr>
+        <td>IPC</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>KBD</td>
+        <td>Library for receiving USB keyboard input</td>
+      </tr>
+      <tr>
+        <td>KPAD</td>
+        <td>Gamepad reading library. Higher level than PAD</td>
+      </tr>
+      <tr>
+        <td>MEM</td>
+        <td>Library for heap memory allocation</td>
+      </tr>
+      <tr>
+        <td>MTX</td>
+        <td>Hardware accelerated vector, matrix and quaternion math library</td>
+      </tr>
+      <tr>
+        <td>NAND</td>
+        <td>Library for reading SD cards</td>
+      </tr>
+      <tr>
+        <td>NWC24</td>
+        <td>Wii connect 24 support library</td>
+      </tr>
+      <tr>
+        <td>OS</td>
+        <td>Common operating system-like utilities. Includes things like multithreading support and system information (for example current time, memory size).</td>
+      </tr>
+      <tr>
+        <td>PAD</td>
+        <td>Low level gamepad library</td>
+      </tr>
+      <tr>
+        <td>SC</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>TPL</td>
+        <td>Texture Palette Library. Library for the TPL texture image container file format</td>
+      </tr>
+      <tr>
+        <td>USB</td>
+        <td>USB support library</td>
+      </tr>
+      <tr>
+        <td>VF</td>
+        <td>Virtual Filesystem support library</td>
+      </tr>
+      <tr>
+        <td>VI</td>
+        <td>Video hardware Interface</td>
+      </tr>
+      <tr>
+        <td>WENC</td>
+        <td>Library for encoding PCM data</td>
+      </tr>
+      <tr>
+        <td>WPAD</td>
+        <td>Library for reading Wii-only (as opposed to also supported in gamecube) gamepads and gamepad features.</td>
+      </tr>
+      <tr>
+        <td>WUD</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>

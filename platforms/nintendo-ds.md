@@ -2,13 +2,13 @@
 title: Nintendo DS
 description: 
 published: true
-date: 2025-12-01T23:16:54.519Z
+date: 2025-12-01T23:44:49.307Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-01T22:14:30.764Z
 ---
 
-For years making decompilations of Nintendo DS games was avoided due to the intimidating size of games on the console, lack of documentation surrounding the SDK and the compilers, and not enough tooling being available to set up and contribute to decompilation projects easily.
+For years making decompilations of Nintendo DS games was avoided due to the games containing multiple binaries (arm9, arm7, many overlays), lack of documentation surrounding the SDK and the compilers, and not enough tooling being available to set up and contribute to decompilation projects easily.
 
 Today, most decompilations in the DS scene are for pokemon games done by people at pret. However there's been a recent push for more DS decompilations after tools like dsd were developed (based on efforts from the GC/Wii decompilation scene) to streamline decompilation. 
 

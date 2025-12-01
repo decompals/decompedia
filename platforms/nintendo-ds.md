@@ -2,7 +2,7 @@
 title: Nintendo DS
 description: 
 published: true
-date: 2025-12-01T22:14:30.764Z
+date: 2025-12-01T22:15:22.479Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-01T22:14:30.764Z
@@ -32,7 +32,7 @@ Today, most decompilations in the DS scene are for pokemon games done by people 
 - [objdiff](/tools/objdiff)
 - [decomp.me](/tools/decomp-me)
 - [dsd](https://github.com/AetiasHax/ds-decomp): Toolkit for setting up and maintaining decompilation projects.
-- [dsd-ghidra](https://github.com/AetiasHax/dsd-ghidra): Ghidra Extension from synchronizing ghidra's function names with decomp projects made with dsd.
+- [dsd-ghidra](https://github.com/AetiasHax/dsd-ghidra): Ghidra Extension for synchronizing ghidra's function names with decomp projects made with dsd.
 - [ds-rom](https://github.com/AetiasHax/ds-rom): Library/CLI tool for extracting the contents of a DS ROM. Used by dsd.
 - [unarm](https://github.com/AetiasHax/unarm): ARM Disassembler library, used by objdiff for DS projects.
 

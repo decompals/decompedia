@@ -2,7 +2,7 @@
 title: Nintendo DS
 description: 
 published: true
-date: 2025-12-01T23:01:11.663Z
+date: 2025-12-01T23:16:54.519Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-01T22:14:30.764Z
@@ -10,7 +10,7 @@ dateCreated: 2025-12-01T22:14:30.764Z
 
 For years making decompilations of Nintendo DS games was avoided due to the intimidating size of games on the console, lack of documentation surrounding the SDK and the compilers, and not enough tooling being available to set up and contribute to decompilation projects easily.
 
-Today, most decompilations in the DS scene are for pokemon games done by people at pret. However there's been a recent push for more DS decompilations after tools like dsd were developed (based on efforts from GC/Wii) scene to streamline decompilation. 
+Today, most decompilations in the DS scene are for pokemon games done by people at pret. However there's been a recent push for more DS decompilations after tools like dsd were developed (based on efforts from the GC/Wii decompilation scene) to streamline decompilation. 
 
 <h2><a href="/projects/game-boy-advance" style="text-decoration: none; color: darkblue;">Projects</a></h2>
 

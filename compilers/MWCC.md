@@ -2,7 +2,7 @@
 title: MWCC
 description: Metroworks C Compiler
 published: true
-date: 2025-06-08T04:06:57.368Z
+date: 2025-12-01T23:15:51.385Z
 tags: compiler, mwcc, metrowerks
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -10,6 +10,8 @@ dateCreated: 2025-06-01T18:59:42.808Z
 
 # MWCC
 MWCC is a commercial compiler by Metrowerks (now owned by Freescale) as part of the CodeWarrior line of compilers and tools available for a large number of platforms. It is a proprietary compiler platform, unlike [GCC](/compilers/GCC), which was licensed out to developers for use on their respective consoles.
+
+A [decompilation of the GC MWCC](https://git.wuffs.org/MWCC/) compiler is underway.
 
 ## Identifying a Metrowerks compiled binary
 
@@ -49,6 +51,10 @@ GameCube/Wii releases of MWCC supported generating debug information in both DWA
 
 ### GC/Wii
 - [Spongebob Battle for Bikini Bottom](https://github.com/bfbbdecomp/bfbb)
+
+### NDS
+- [The World Ends with You](https://github.com/Yotona/twewy)
+- [Fire Emblem: Shadow Dragon](https://github.com/Eebit/fe11-us)
 
 ###  Known MWCC games without a decompilation project
 

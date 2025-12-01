@@ -2,7 +2,7 @@
 title: Nintendo DS
 description: 
 published: true
-date: 2025-12-01T22:15:22.479Z
+date: 2025-12-01T23:01:11.663Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-01T22:14:30.764Z

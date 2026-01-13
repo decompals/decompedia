@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2025-12-02T01:19:55.689Z
+date: 2026-01-13T11:41:44.003Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T19:55:57.341Z
@@ -49,7 +49,7 @@ Games written for 6th generation consoles were written in a mix of C or C++.
 
 ### 7th Generation
 - [Wii](/platforms/gamecube-wii)
-
+- [Xbox 360](/platforms/xbox-360)
 ### Handheld
 
 - [Game Boy Advance](/platforms/game-boy-advance)

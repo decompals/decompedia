@@ -2,7 +2,7 @@
 title: GCC
 description: 
 published: true
-date: 2026-01-27T18:21:28.247Z
+date: 2026-01-27T19:30:08.873Z
 tags: compiler
 editor: markdown
 dateCreated: 2024-12-07T10:04:12.101Z
@@ -129,88 +129,10 @@ foo:
       addiu   $sp, $sp, 0x18
 ```
 
-
-Todo add https://github.com/pmret/papermario/wiki/GCC-2.8.1-Tips-and-Tricks
-
-### Shifting
-
-#### Unsigned right shift
-
-Used to perform logical shifts to the left for 16-bit and 8-bit values.
-```
- (var_a0 << 0x10) >> 0x13
-```
-The processor is ensuring var_a0 is a u16 by removing the highest 16 bits. then it is shifting it back to the right by 0x10 plus 3. This can be simplified as the following:
-```
- (u16)var_a0 >> 0x13
-```
-If var_a0 is already a u16, then you can just write the following:
-```
- var_a0 >> 3
-```
-If var_a0 would have been an u8, the pattern would have looked like the following:
-```
- (var_a0 << 0x18) >> 0x1B
-```
-
-#### Signed division by 2
-
-The following was found in KMC GCC and documented by AngheloAlf [here](https://hackmd.io/eYQR3yfhQymeTGsVM-SpEg).
-
-There are three different patterns involving a signed variable divided by 2. The variant depends from the size of the type.
-```
-  s32 temp_v0;
-  // temp_v0 = ((s32)(temp_v0 + ((u32)temp_v0 >> 0x1F)) >> 1)
-  temp_v0 /= 2;
-```
-  
-```
-  s16 temp_v0;
-  // temp_v0 = ((s32)(temp_v0 + (((u32)(temp_v0 << 0x10)) >> 0x1F))) >> 1
-  temp_v0 /= 2;
-```
-  
-```
-  s8 temp_v0;
-  // temp_v0 = ((s32)(temp_v0 + (((u32)(temp_v0 << 0x18)) >> 0x1F))) >> 1
-  temp_v0 /= 2;
-```
-
-### Conditionals
-
-#### Conditional range
-
-Used when comparing a variable to a specific range of integers.
-```
- if (((u32)(var_a0 - 0xE)) < 9) 
-```
-This can be translated into
-```
- if (var_a0 >= 0xE && var_a0 < 9 + 0xE) 
-```
-And can be simplified as 
-```
- if (var_a0 > 13 && var_a0 < 23) 
-```
-The way it works is that if var_a0 is less than 14, when 14 is subtracted and then converted to unsigned then it will be greater than 9, effectively being equivalent to the conditional range prior to optimization.
-
-#### SLTI with 0 as immediate
-
-Originally found in SOTN Decomp, exists in exactly one place in the game. Difficult-to-match instruction was 
-```
- slti    v0,a0,0 
-```
-Matching C is 
-```
- v0 = ((a0 & (1<<31)) != 0);
-```
-where a0 is a signed 32-bit integer. Pattern applies to GCC 2.7.2.3 and below.
-
 ### Arithmetic
 
-#### Modulo
+#### Modulo by power of 2
 
-Used when performing a modulo to a power of 2
 ```
  s32 a = i + n;
  s32 b = a;
@@ -224,6 +146,148 @@ Can also be written as
  x = (i + n) % 16
 ```
 
+#### Signed division by 2
+
+The following was found in KMC GCC and documented by AngheloAlf [here](https://hackmd.io/eYQR3yfhQymeTGsVM-SpEg).
+
+There are three different patterns involving a signed variable divided by 2. The variant depends from the size of the type.
+
+```c
+  s32 temp_v0;
+  // temp_v0 = ((s32)(temp_v0 + ((u32)temp_v0 >> 0x1F)) >> 1)
+  temp_v0 /= 2;
+```
+  
+```c
+  s16 temp_v0;
+  // temp_v0 = ((s32)(temp_v0 + (((u32)(temp_v0 << 0x10)) >> 0x1F))) >> 1
+  temp_v0 /= 2;
+```
+  
+```c
+  s8 temp_v0;
+  // temp_v0 = ((s32)(temp_v0 + (((u32)(temp_v0 << 0x18)) >> 0x1F))) >> 1
+  temp_v0 /= 2;
+```
+
+#### Division by constant using multiply+shift (`MULT_HI`)
+
+The following was originally taken from [Paper Mario](https://github.com/pmret/papermario/wiki/GCC-2.8.1-Tips-and-Tricks), which uses GCC 2.8.1.
+
+GCC will sometimes optimize a floating-point division with a constant into
+a multiply-and-shift operation, taking advantage of support for
+64-bit multiply results.
+
+```c
+f32 x;
+// y is some constant value
+x / y;
+```
+
+becomes
+
+```c
+f32 x;
+// x = MULT_HI(x, constant) >> shift
+x = (float)(((u64)x * constant >> 0x20) >> shift);
+```
+
+The following list of constants/shifts were taken from [this blog](https://flaviojslab.blogspot.com/2008/02/integer-division.html).
+
+|Multiply|Shift|Original|
+|--------|-----|--------|
+|0x069C16BD|	0|	665/25756|
+|0x10624DD3|	4|	1/250|
+|0x10624DD3|	5|	1/500|
+|0x10624DD3|	6|	1/1000|
+|0x2AAAAAAB|	0|	1/6|
+|0x30C30C31|	3|	1/42|
+|0x38E38E39|	1|	1/9|
+|0x4EC4EC4F|	3|	1/26|
+|0x51EB851F|	5|	1/100|
+|0x55555556|	0|	1/3|
+|0x66666667|	1|	1/5|
+|0x66666667|	2|	1/10|
+|0x66666667|	3|	1/20|
+|0x66666667|	4|	1/40|
+|0x66666667|	5|	1/80|
+|0x66666667|	6|	1/160|
+|0x66666667|	7|	1/320|
+|0x66666667|	8|	1/640|
+|0x6BCA1AF3|	5|	1/76|
+|0x88888889|	8|	1/480|
+|0x92492493|	3|	1/14|
+|0xA0A0A0A1|	7|	1/204|
+|0xAAAAAAAB|	1|	1/3|
+|0xAAAAAAAB|	2|	1/6|
+|0xAAAAAAAB|	3|	1/12|
+|0xAAAAAAAB|	4|	1/24|
+|0xAE147AE1|	5|	17/800|
+|0xB21642C9|	5|	1/46|
+|0xB60B60B7|	5|	1/45|
+|0xBA2E8BA3|	3|	1/11|
+|0xEA0EA0EB|	0|	32/35|
+
+### Shifting
+
+#### Unsigned right shift (Signed/Unsigned conversions)
+
+Used to perform logical shifts to the left for 16-bit and 8-bit values.
+```c
+ (var_a0 << 0x10) >> 0x13
+```
+The processor is ensuring var_a0 is a u16 by removing the highest 16 bits. then it is shifting it back to the right by 0x10 plus 3. This can be simplified as the following:
+```c
+ (u16)var_a0 >> 0x13
+```
+If var_a0 is already a u16, then you can just write the following:
+```c
+ var_a0 >> 3
+```
+If var_a0 would have been an u8, the pattern would have looked like the following:
+```c
+ (var_a0 << 0x18) >> 0x1B
+```
+
+### Conditionals
+
+#### Conditional range
+
+Used when comparing a variable to a specific range of integers.
+```c
+ if (((u32)(var_a0 - 0xE)) < 9) 
+```
+This can be translated into
+```c
+ if (var_a0 >= 0xE && var_a0 < 9 + 0xE) 
+```
+And can be simplified as 
+```c
+ if (var_a0 > 13 && var_a0 < 23) 
+```
+The way it works is that if var_a0 is less than 14, when 14 is subtracted and then converted to unsigned then it will be greater than 9, effectively being equivalent to the conditional range prior to optimization.
+
+#### SLTI with 0 as immediate
+
+Originally found in SOTN Decomp, exists in exactly one place in the game. Difficult-to-match instruction was 
+```
+ slti    v0,a0,0 
+```
+Matching C is 
+```c
+ v0 = ((a0 & (1<<31)) != 0);
+```
+where a0 is a signed 32-bit integer. Pattern applies to GCC 2.7.2.3 and below.
+
+### Branching
+
+#### `likely` Instructions (`bnel`, `bnezl`, etc.)
+
+The following was originally taken from [Paper Mario](https://github.com/pmret/papermario/wiki/GCC-2.8.1-Tips-and-Tricks), but the behavior has been seen
+in GCC 2.9 on PS2 as well (Twisted Metal Black).
+
+If you encounter likely instructions, these mean that the delay slot instruction is only executed if the branch is taken. Sometimes your code is equalvent but you still get these instructions (or don't get them when you want them). Try inverting the condition, as this sometimes coerces the compiler into using a `likely` instruction.
+
 ### Loops
 
 #### `-O0` Differences
@@ -232,4 +296,105 @@ The following was found in KMC GCC and documented by AngheloAlf [here](https://h
 
 In `-O0`, `for(;;)` generates different code than `while(1)`.
 
+#### Negative struct offsets in loops
 
+The following was originally documented for [Paper Mario](https://github.com/pmret/papermario/wiki/GCC-2.8.1-Tips-and-Tricks), which uses GCC 2.8.1.
+
+You may see the asm do this:
+
+```c
+void fx_73_update(EffectInstance* arg0) {
+    SomeStruct* structTemp;
+    s32 i;
+
+    structTemp = arg0->data;
+
+    if (arg0->numParts > 1) {
+        structPlus20 = temp_a1 + 0x20;
+        do {
+            if (structPlus20->unk0 <= 0) {
+                structPlus20->unk-1C--;
+                if (structPlus20->unk-1C >= 0xA) {
+                    structPlus20->unk0 = -1;
+                }
+            }
+            i++;
+            structPlus20 += 0x24;
+        } while (i < arg0->numParts);
+    }
+}
+```
+
+Note the negative offsets (`unk-1C`, for example) and how structPlus20 is `0x20` bytes into the struct. You can calculate the correct offsets by taking the `0x20` and subtracting `0x1C` to get `structTemp->unk_04`. However, to get the code to actually generate these negative offsets, you need to increment the struct temp pointer as well as the normal loop iterator: `for (i = 1; i < numParts; i++, structTemp++) {`
+
+### Switch Statements / Jump Tables
+
+#### "Irregular" Switches
+
+The following was originally documented for [Paper Mario](https://github.com/pmret/papermario/wiki/GCC-2.8.1-Tips-and-Tricks), which uses GCC 2.8.1.
+
+"Irregular" switches (as deemed by [m2c](github.com/matt-kempster/m2c)) are switches that are small enough that they do not need a jumptable, and may appear as an if/else chain in m2c's output.
+
+The following is an example of what you might see from m2c for an irregular switch:
+
+```c
+if (var != 1) {
+  if (var < 4) {
+    // case 0, 2, 3
+    temp = 2;
+  } else {
+    // default case
+    temp = 5;
+  }
+} else {
+  // case 1
+  temp = 10;
+}
+```
+
+which can be matched with the following switch statement:
+
+```c
+switch (var) {
+  case 1:
+    temp = 10;
+    break;
+  case 0:
+  case 2:
+  case 3:
+    temp = 2;
+    break;
+  default:
+    temp = 5;
+    break;
+}
+```
+
+##### Irregular Switch Irregularities
+
+Irregular switches may include a seemingly unused register checking for a certain condition; this may imply that the original code contained a case that was identical to the default case but was explicitly provided e.g. `slti t6, s5, 2`
+
+the `t6` register (result of the comparison) will never be used in the following switch, but the comparison that sets it will appear in the asm:
+
+```c
+switch (temp_t5) {
+  case 0:
+  case 1:
+    /* matches default case! */
+    var1 = 10;
+    var2 = 20;
+    break;
+  case 8:
+    var1 = 15;
+    var2 = 40;
+    break;
+  case 11:
+    var1 = 30;
+    var2 = 5;
+    break;
+  default:
+    var1 = 10;
+    var2 = 20;
+    break;
+}
+```

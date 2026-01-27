@@ -2,7 +2,7 @@
 title: GCC
 description: 
 published: true
-date: 2026-01-27T18:14:55.306Z
+date: 2026-01-27T18:21:28.247Z
 tags: compiler
 editor: markdown
 dateCreated: 2024-12-07T10:04:12.101Z
@@ -132,9 +132,9 @@ foo:
 
 Todo add https://github.com/pmret/papermario/wiki/GCC-2.8.1-Tips-and-Tricks
 
-Todo add https://hackmd.io/eYQR3yfhQymeTGsVM-SpEg
+### Shifting
 
-##### Unsigned right shift
+#### Unsigned right shift
 
 Used to perform logical shifts to the left for 16-bit and 8-bit values.
 ```
@@ -153,7 +153,9 @@ If var_a0 would have been an u8, the pattern would have looked like the followin
  (var_a0 << 0x18) >> 0x1B
 ```
 
-##### Signed division by 2
+#### Signed division by 2
+
+The following was found in KMC GCC and documented by AngheloAlf [here](https://hackmd.io/eYQR3yfhQymeTGsVM-SpEg).
 
 There are three different patterns involving a signed variable divided by 2. The variant depends from the size of the type.
 ```
@@ -174,7 +176,9 @@ There are three different patterns involving a signed variable divided by 2. The
   temp_v0 /= 2;
 ```
 
-##### Conditional range
+### Conditionals
+
+#### Conditional range
 
 Used when comparing a variable to a specific range of integers.
 ```
@@ -190,7 +194,21 @@ And can be simplified as
 ```
 The way it works is that if var_a0 is less than 14, when 14 is subtracted and then converted to unsigned then it will be greater than 9, effectively being equivalent to the conditional range prior to optimization.
 
-##### Modulo
+#### SLTI with 0 as immediate
+
+Originally found in SOTN Decomp, exists in exactly one place in the game. Difficult-to-match instruction was 
+```
+ slti    v0,a0,0 
+```
+Matching C is 
+```
+ v0 = ((a0 & (1<<31)) != 0);
+```
+where a0 is a signed 32-bit integer. Pattern applies to GCC 2.7.2.3 and below.
+
+### Arithmetic
+
+#### Modulo
 
 Used when performing a modulo to a power of 2
 ```
@@ -205,14 +223,13 @@ Can also be written as
 ```
  x = (i + n) % 16
 ```
-##### SLTI with 0 as immediate
 
-Originally found in SOTN Decomp, exists in exactly one place in the game. Difficult-to-match instruction was 
-```
- slti    v0,a0,0 
-```
-Matching C is 
-```
- v0 = ((a0 & (1<<31)) != 0);
-```
-where a0 is a signed 32-bit integer. Pattern applies to GCC 2.7.2.3 and below.
+### Loops
+
+#### `-O0` Differences
+
+The following was found in KMC GCC and documented by AngheloAlf [here](https://hackmd.io/eYQR3yfhQymeTGsVM-SpEg).
+
+In `-O0`, `for(;;)` generates different code than `while(1)`.
+
+

@@ -2,7 +2,7 @@
 title: GCC
 description: 
 published: true
-date: 2026-02-01T01:28:39.550Z
+date: 2026-02-01T01:30:14.004Z
 tags: compiler
 editor: markdown
 dateCreated: 2024-12-07T10:04:12.101Z
@@ -495,10 +495,10 @@ By default on PS2, GCC will remove most floating-point literals from the code
 and relocate them into the `.lit4` section, where they can be loaded from
 memory.
 
-When matching the code without a `.lit4` exception available,
-the literals are typically referenced as `extern float` variables until
-the TU has been fully decompiled, at which point they can be replaced with the
-original literals. Take `mathfRPHFromMatrix()`:
+When matching the code before `.lit4` migration, the literals are typically
+referenced as `extern float` variables until the TU has been fully decompiled,
+at which point they can be replaced with the original literals.
+Take `mathfRPHFromMatrix()`:
 
 ```c++
 extern float D_004FA668; // 1.5707964f

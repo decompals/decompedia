@@ -2,7 +2,7 @@
 title: GCC
 description: 
 published: true
-date: 2026-01-31T21:34:52.711Z
+date: 2026-02-01T01:28:39.550Z
 tags: compiler
 editor: markdown
 dateCreated: 2024-12-07T10:04:12.101Z
@@ -483,3 +483,76 @@ float mathfDist2(FVECTOR* origin, FVECTOR* dst)
 ```
 
 This also matches the original code.
+
+### Delay Slots and `NOP`s
+
+#### `NOP`s due to floating point literals (PS2)
+
+This behavior was found in GCC 2.9 991111 (PS2) in Twisted Metal: Black, and
+likely only applies to PS2 due to the use of the `.lit4` section.
+
+By default on PS2, GCC will remove most floating-point literals from the code
+and relocate them into the `.lit4` section, where they can be loaded from
+memory.
+
+When matching the code without a `.lit4` exception available,
+the literals are typically referenced as `extern float` variables until
+the TU has been fully decompiled, at which point they can be replaced with the
+original literals. Take `mathfRPHFromMatrix()`:
+
+```c++
+extern float D_004FA668; // 1.5707964f
+extern float D_004FA66C; // -1.5707964f
+
+void mathfRPHFromMatrix(FMATRIX mat, FVECTOR* result)
+{
+    // ...
+    
+    if (mat[1][2] > 0.0f) {
+        result->x = D_004FA668; // pi / 2
+        result->z = atan2f(-mat[0][1], -mat[2][1]);
+    } else {
+        result->x = D_004FA66C; // -pi / 2
+        result->z = atan2f(-mat[0][1], mat[2][1]);
+    }
+    result->y = 0.0f;
+}
+```
+
+However, the `.lit4` substitution can change codegen.
+When compiled, the code is actually missing a `nop` compared to the original:
+
+```
+// This is the `if (mat[1][2] > 0.0f) {}` branch check.
+TARGET                                                   CURRENT (60)
+dbcf4:    mtc1    zero,$f0                               dbcf4:    mtc1    zero,$f0                 
+dbcf8:    nop                                            dbcf8:    nop                              
+dbcfc:    c.lt.s  $f0,$f1                                dbcfc:    c.lt.s  $f0,$f1                  
+dbd00:    nop                                            dbd00:    nop                              
+dbd04:    bc1f    dbd24 ~>                               dbd04:    bc1f    dbd20 ~>                 
+dbd08:    nop                                     <                                                 
+dbd0c:    lwc1    $f0,%gp_rel(D_004FA668)(gp)            dbd08:    lwc1    $f0,%gp_rel(D_004FA668)(gp)          
+dbd10:    swc1    $f0,0(s1)                              dbd0c:    swc1    $f0,0(s1)      
+```
+
+The `nop` is included as expected if we properly substitute the literals.
+
+```c++
+void mathfRPHFromMatrix(FMATRIX mat, FVECTOR* result)
+{
+    // ...
+    
+    if (mat[1][2] > 0.0f) {
+        result->x = 1.5707964f; // pi / 2
+        result->z = atan2f(-mat[0][1], -mat[2][1]);
+    } else {
+        result->x = -1.5707964f; // -pi / 2
+        result->z = atan2f(-mat[0][1], mat[2][1]);
+    }
+    result->y = 0.0f;
+}
+```
+
+Unfortunately, the only workaround for this when matching a TU is to leave the
+function alone until you're ready to migrate and match the `.lit4` section;
+you won't be able to compile otherwise.

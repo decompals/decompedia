@@ -2,7 +2,7 @@
 title: GCC
 description: 
 published: true
-date: 2026-02-08T19:39:49.889Z
+date: 2026-02-08T19:45:27.605Z
 tags: compiler
 editor: markdown
 dateCreated: 2024-12-07T10:04:12.101Z
@@ -572,15 +572,15 @@ class Combo {
 public:
     int state;
     int pad_index;
-		// ...
+    // ...
     void Update(Vehicle* vehicle);
     // ...
 };
 
 void Combo::Update(Vehicle* vehicle)
 {
-		// ..
-		this->rightPressed_buf[frame] = rightPressed;
+    // ..
+    this->rightPressed_buf[frame] = rightPressed;
     // Handle analog stick inputs.
     joyStick = inputFixAnalogValue(2, this->pad_index);
     // ...
@@ -606,7 +606,7 @@ class Combo {
 public:
     int state;
     bool pad_index;
-		// ...
+    // ...
     void Update(Vehicle* vehicle);
     // ...
 };

@@ -2,7 +2,7 @@
 title: GCC
 description: 
 published: true
-date: 2026-02-01T01:30:14.004Z
+date: 2026-02-08T19:39:49.889Z
 tags: compiler
 editor: markdown
 dateCreated: 2024-12-07T10:04:12.101Z
@@ -556,3 +556,67 @@ void mathfRPHFromMatrix(FMATRIX mat, FVECTOR* result)
 Unfortunately, the only workaround for this when matching a TU is to leave the
 function alone until you're ready to migrate and match the `.lit4` section;
 you won't be able to compile otherwise.
+
+### C++ Features
+
+#### `bool` load/store order
+
+This behavior was found in GCC 2.9 991111 (PS2) in Twisted Metal: Black.
+
+In old GCC compilers with C++ support, the C++ `bool` type can behave differently
+from an `int` used in the same location, particularly with respect to variable
+loads and stores. Take `Combo::Update()`:
+
+```c++
+class Combo {
+public:
+    int state;
+    int pad_index;
+		// ...
+    void Update(Vehicle* vehicle);
+    // ...
+};
+
+void Combo::Update(Vehicle* vehicle)
+{
+		// ..
+		this->rightPressed_buf[frame] = rightPressed;
+    // Handle analog stick inputs.
+    joyStick = inputFixAnalogValue(2, this->pad_index);
+    // ...
+}
+```
+
+This produces a mismatch on the call to `inputFixAnalogValue`; the variable
+load for `this->pad_index` is swapped.
+
+```
+1c8d4:    sw      t0,0x214(a1)                           1c8d4:    sw      t0,0x214(a1)             
+1c8d8:    lw      a1,4(s0)                        |      1c8d8:    sw      v0,0x304(v1)             
+1c8dc:    jal     1d8da8                                 1c8dc:    jal     1d8da8                   
+1c8e0:    sw      v0,0x304(v1)                    |      1c8e0:    lw      a1,4(s0)                 
+1c8e4:    move    v1,v0                                  1c8e4:    move    v1,v0         
+```
+
+However, if we change the type of `pad_index` from `int` to `bool`, the code
+matches without issue.
+
+```c++
+class Combo {
+public:
+    int state;
+    bool pad_index;
+		// ...
+    void Update(Vehicle* vehicle);
+    // ...
+};
+```
+
+```
+1c8d4:    sw      t0,0x214(a1)                           1c8dc:    sw      t0,0x214(a1)             
+1c8d8:    lw      a1,4(s0)                               1c8e0:    lw      a1,4(s0)                 
+1c8dc:    jal     1d8da8                                 1c8e4:    jal     1d8da8                   
+1c8e0:    sw      v0,0x304(v1)                           1c8e8:    sw      v0,0x304(v1)             
+1c8e4:    move    v1,v0                                  1c8ec:    move    v1,v0          
+```
+

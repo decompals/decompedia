@@ -2,7 +2,7 @@
 title: decomp.dev
 description: 
 published: true
-date: 2025-05-09T05:54:37.125Z
+date: 2026-02-15T19:39:58.212Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:56:30.855Z

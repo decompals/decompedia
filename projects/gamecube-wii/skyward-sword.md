@@ -2,7 +2,7 @@
 title: The Legend of Zelda: Skyward Sword
 description: 
 published: true
-date: 2025-06-10T10:56:13.652Z
+date: 2026-02-15T19:39:00.808Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-04T15:52:31.951Z
@@ -30,7 +30,7 @@ There is no known debug information for any Skyward Sword version, so a large pa
 
 * [EGG](/libraries/egg)
 * [NintendoWare for Revolution](/libraries/nw4r)
-* [Revolution SDK](/libraries/dolphin-sdk)
+* [Revolution SDK](/libraries/dolphin-sdk) (Aug 2010)
 * LibMS
 * Various smaller libraries shared with [NSMBW](/projects/new-super-mario-bros-wii) and AC: City Folk:
   * fLib | core engine framework
@@ -38,12 +38,15 @@ There is no known debug information for any Skyward Sword version, so a large pa
   * sLib | interpolation, easing, state management
   * mLib | wrappers for NW4R's g3d and lyt, wrappers for EGG, math types
 * JSystem (JStudio, JParticle)
-* Code borrowed from other games, e.g. Collision code
+* THPPlayer
+* Code borrowed from other games, e.g. Collision code, Virtual Keyboard
 
 ## External Resources
 
 As mentioned above, much of our knowledge about Skyward Sword's code comes from other games:
 
+* [Revolution SDK](/libraries/dolphin-sdk) is found in every Wii game
+  * There's an active [decomp of the Dec 2009 version](https://github.com/doldecomp/sdk_2009-12-11)
 * [New Super Mario Bros. Wii](/projects/new-super-mario-bros-wii) shares much of the core engine and libraries
   * Many [symbol names](https://rootcubed.dev/nsmbw-symbols/symbolList/) have been discovered - always worth checking
   * Also has an active [decomp project](https://github.com/NSMBW-Community/NSMBW-Decomp)
@@ -52,6 +55,8 @@ As mentioned above, much of our knowledge about Skyward Sword's code comes from 
 * Big Brain Academy has a linker map file
   * Semi-active [decomp project](https://github.com/vabold/bba-wd)
 * Tokyo Friend Park II - Ketteiban has full DWARF debug info
+* [Wii Menu](/projects/gamecube-wii/wii-menu) has a Virtual Keyboard that Skyward Sword copied
+  * Active [decomp project](https://github.com/koopthekoopa/wii-ipl)
 * [The Wind Waker](/projects/gamecube-wii/wind-waker) and [Twilight Princess](/projects/gamecube-wii/twilight-princess) are earlier entries in the series for similar hardware
   * Collision code is lifted straight from TP
   * JSystem code is very similar to TP's JSystem

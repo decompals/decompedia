@@ -2,7 +2,7 @@
 title: Wii Menu
 description: Wii Menu (Version 4.3) for Nintendo Wii
 published: true
-date: 2025-10-07T12:49:12.179Z
+date: 2026-02-15T19:40:05.114Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T12:52:58.856Z

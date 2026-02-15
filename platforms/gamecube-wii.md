@@ -2,7 +2,7 @@
 title: GameCube & Wii
 description: 
 published: true
-date: 2025-06-11T03:00:35.490Z
+date: 2026-02-15T19:38:58.925Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T20:34:00.052Z

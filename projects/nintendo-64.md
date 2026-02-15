@@ -2,7 +2,7 @@
 title: Nintendo 64
 description: 
 published: true
-date: 2025-06-10T14:34:59.943Z
+date: 2026-02-15T19:39:15.673Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T18:54:40.812Z

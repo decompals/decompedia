@@ -2,7 +2,7 @@
 title: Luigi's Mansion
 description: Info about Luigi's Mansion decompilation for GameCube
 published: true
-date: 2025-04-27T09:36:16.657Z
+date: 2026-02-15T19:39:54.719Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:05:15.836Z

@@ -2,7 +2,7 @@
 title: Compiler behavior
 description: 
 published: true
-date: 2025-01-21T19:33:30.085Z
+date: 2026-02-15T19:39:33.540Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-21T19:29:35.260Z

@@ -2,7 +2,7 @@
 title: Objects (by group)
 description: 
 published: true
-date: 2025-03-20T21:34:16.706Z
+date: 2026-02-15T19:39:51.344Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-20T21:34:13.199Z

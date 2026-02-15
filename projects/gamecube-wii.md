@@ -2,7 +2,7 @@
 title: Gamecube Wii
 description: 
 published: true
-date: 2025-05-20T16:16:35.207Z
+date: 2026-02-15T19:39:56.454Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T09:26:55.635Z
@@ -20,6 +20,7 @@ dateCreated: 2025-04-23T09:26:55.635Z
 - [Pikmin](/projects/gamecube-wii/pikmin)
 - [Pikmin 2](/projects/gamecube-wii/pikmin-2)
 - [SpongeBob SquarePants: Battle for Bikini Bottom](/projects/gamecube-wii/battle-for-bikini-bottom)
+- [SSX 3](https://github.com/ssxdecomp/ssx3_gc)
 - [Super Mario Sunshine](/projects/gamecube-wii/super-mario-sunshine)
 - [Super Monkey Ball](/projects/gamecube-wii/super-monkey-ball)
 - [Super Smash Bros. Melee](/projects/gamecube-wii/super-smash-bros-melee)

@@ -2,7 +2,7 @@
 title: Decomp Intro
 description: 
 published: true
-date: 2025-06-02T23:20:12.816Z
+date: 2026-02-15T19:39:08.943Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-19T18:33:28.731Z
@@ -135,7 +135,7 @@ Note that I've purposely compiled this to prevent auto inlining and make both fu
 - `802d8644    blr`
     - This breaks to whatever function called `call_adder`, and ends execution of `call_adder`. From these last two instructions we can deduce the following:
         - A function will use `mflr` and `mtlr` if it has to call a function and modify the link register, which is why `adder` doesn't need to do so.
-        - We can tell where functions start and stop without looking at the source code by looking between pairs of `blr` opcodes.
+        - We can tell where functions start and stop without looking at the source code by looking between pairs of `blr` opcodes (making some assumptions about the compiler).
 
 You likely won't fully grasp these concepts if you're still new to assembly and haven't done much decomp yet, which is fine; the main takeaway you should see here is that functions in C are simply an address in memory that a caller breaks to. 
 
@@ -217,12 +217,17 @@ and that's because the linker actually does gain the ability to delete a functio
 - If I had used the `static` keyword on `adder`, which (when used on a function) means you're telling the compiler that no other TU uses that function, then the compiler would have actually been able to delete the machine code in the object file for that function *before* the linking stage. This is why you get a *linker* error when calling a function from another TU that has the `static` keyword instead of a *compiler* error. The compilation stage can't know there's a problem until it gets to linking!
 - The `inline` keyword has gained less and less relevance to compilers as they get "smarter" with their optimizations, with compilers even in the 2000s like MWCC often making the choice whether to inline a function or not regardless of the keyword's presence. It still has a large influence in MWCC and the codegen in most games, however, and shouldn't be overlooked when working on a file.
 
+
+> If you would like a more thorough and detailed explanation on the topic of compilation, linking, translation units, and how functions relate to them, then check out [this lecture](https://guide.handmadehero.org/chat/chat013) that this portion of the guide is partially based on. It's quite long and covers x86 on Windows, but it should solidify your understanding by quite a lot if you have the time!
+{.is-info}
+
+
 ## Aside on types of executables
 
-It's important to briefly note that there are multiple sort of "ways" a typical program can load code into RAM. The simplest way is to gather all the object files together and turn them into a single executable that the OS will load once at the beginning and leave there until the program closes. This is notably how Super Smash Bros. Melee is structured, for instance; the only file that objdiff needs if you've ever built the game from its [decomp repo](https://github.com/doldecomp/melee) is `main.dol`. However, it's common for a game's code to be compartamentalized across multiple files besides the main executable, which are typically called *relocatable object files*. Basically you can choose to just not run the linker on certain object files when making the executable and instead, when the game is being run, have the OS perform a kind of "linking" on demand that allows you to load and unload the related code whenever you want. You may be familiar with DLL files, the Windows equivalent of a REL, and if you think about what DLL stands for, "dynamically linked library," it's pretty much just that. The two main reasons for doing this include:
+It's important to briefly note that there are multiple sort of "ways" a typical program can load code into RAM. The simplest way is to gather all the object files together and turn them into a single executable that the OS will load once at the beginning and leave there until the program closes. This is notably how Super Smash Bros. Melee is structured, for instance; the only file that objdiff needs if you've ever built the game from its [decomp repo](https://github.com/doldecomp/melee) is `main.dol`. However, it's common for a game's code to be compartmentalized across multiple files besides the main executable, which are typically called *relocatable object files*. Basically you can choose to just not run the linker on certain object files when making the executable and instead, when the game is being run, have the OS perform a kind of "linking" on demand that allows you to load and unload the related code whenever you want. You may be familiar with DLL files, the Windows equivalent of a REL, and if you think about what DLL stands for, "dynamically linked library," it's pretty much just that. The two main reasons for doing this include:
 
 - Developer convenience. If you've ever used a library like SDL, Qt, or GLEW, you typically don't compile the source code of the libraries every time you rebuild; instead (if you're on Windows) you download a few DLL files and put them in the same directory as your code, and when the OS opens your program, it automatically also loads those DLLs. 
-- Space. The GC and Wii only have 24 and 88 MB of RAM respectively, and a game's total code footprint can take a sizeable chunk of this. So if a game needs as much RAM as possible, it would be best to only load what code is actually being used. This is notably true for games like Brawl and Mario Kart Wii, where every fighter and stage are contained in their own REL. 
+- Space. The GC and Wii only have 24 and 88 MB of RAM respectively, and a game's total code footprint can take a sizeable chunk of this. So if a game needs as much RAM as possible, it would be best to only load what code is actually being used. This is notably true for games like Brawl and Mario Kart Wii, where every fighter, stage, and track are contained in their own REL. 
 
 
 ## The decomp process

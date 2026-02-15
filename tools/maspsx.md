@@ -2,7 +2,7 @@
 title: maspsx
 description: Modern PSYQ Assembler
 published: true
-date: 2025-02-02T11:30:36.119Z
+date: 2026-02-15T19:39:36.984Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-02T11:30:34.498Z

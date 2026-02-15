@@ -2,7 +2,7 @@
 title: MWCC
 description: Metroworks C Compiler
 published: true
-date: 2025-12-01T23:15:51.385Z
+date: 2026-02-15T19:40:10.347Z
 tags: compiler, mwcc, metrowerks
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -108,8 +108,69 @@ And here is a comparison of the two conditionals and the MIPS assembly output:
 | ------------------------------------------- | -------------------------------------------- |
 | slti    v0,s0,0x100<br>bnez    at,40<br>nop |  slti    at,s0,0x100<br>bnez    at,40<br>nop |
 
+### Interprocedural optimization within a compilation unit
 
+There are cases where a function cannot be properly matched on its own. With static functions, MWCC can perform optimizations using information about the whole compilation unit.
 
- 
+```c
+int flowers = 0;
 
+void plant(int count) {
+    flowers += count;
+}
 
+void harvest(int count) {
+    flowers -= count;
+}
+
+void garden(int count) {
+    plant(count);
+    harvest(count);
+}
+```
+
+In this example, when `plant` is not static, MWCC treats the function as opaque and must not assume it leaves caller-saved registers such as `a0` unchanged. So the compiler restores `a0` from the callee-saved temporary `s0` before calling `harvest`, as shown in the assembly below.
+
+```s
+addiu sp, sp, -0x20
+sd ra, 0x10(sp)
+sq s0, 0x0(sp)
+daddu s0, a0, zero
+jal plant
+nop
+daddu a0, s0, zero
+jal harvest
+nop
+ld ra, 0x10(sp)
+lq s0, 0x0(sp)
+addiu sp, sp, 0x20
+jr ra
+nop
+```
+
+However, making `plant` static within the same C file allows MWCC to prove that the function does not modify its argument.
+
+```c
+static void plant(int count) {
+    flowers += count;
+}
+```
+
+Then MWCC omits the `daddu a0, s0, zero` instructions, as `a0` already holds the correct argument value.
+
+```s
+addiu sp, sp, -0x10
+sd ra, 0x0(sp)
+jal plant
+nop
+jal harvest
+nop
+ld ra, 0x0(sp)
+addiu sp, sp, 0x10
+jr ra
+nop
+```
+
+Note that if `plant` *does* clobber `a0`, MWCC cannot perform this optimization.
+
+This behavior can arise at all optimization levels above `-O0` on MWCCPS2 2.4 and 3.0.3.

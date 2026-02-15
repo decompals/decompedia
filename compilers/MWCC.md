@@ -1,8 +1,8 @@
 ---
 title: MWCC
-description: Metroworks C Compiler
+description: Metrowerks C Compiler
 published: true
-date: 2026-02-15T19:40:10.347Z
+date: 2026-02-15T19:44:46.719Z
 tags: compiler, mwcc, metrowerks
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z

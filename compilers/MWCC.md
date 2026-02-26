@@ -2,7 +2,7 @@
 title: MWCC
 description: Metrowerks C Compiler
 published: true
-date: 2026-02-15T19:44:46.719Z
+date: 2026-02-26T17:25:25.565Z
 tags: compiler, mwcc, metrowerks
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -11,7 +11,7 @@ dateCreated: 2025-06-01T18:59:42.808Z
 # MWCC
 MWCC is a commercial compiler by Metrowerks (now owned by Freescale) as part of the CodeWarrior line of compilers and tools available for a large number of platforms. It is a proprietary compiler platform, unlike [GCC](/compilers/GCC), which was licensed out to developers for use on their respective consoles.
 
-A [decompilation of the GC MWCC](https://git.wuffs.org/MWCC/) compiler is underway.
+A [decompilation of Mac MWCC](https://git.wuffs.org/MWCC/) compiler is underway.
 
 ## Identifying a Metrowerks compiled binary
 

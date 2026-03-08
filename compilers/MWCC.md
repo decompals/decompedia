@@ -2,7 +2,7 @@
 title: MWCC
 description: Metrowerks C Compiler
 published: true
-date: 2026-02-26T17:25:25.565Z
+date: 2026-03-08T02:03:23.776Z
 tags: compiler, mwcc, metrowerks
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -58,7 +58,7 @@ GameCube/Wii releases of MWCC supported generating debug information in both DWA
 
 ###  Known MWCC games without a decompilation project
 
-### PS2
+#### PS2
 - Airblade (2001)
 	- [x] Has `.comment` MW compiler string.
 - Burnout 3 (2004)
@@ -80,6 +80,11 @@ GameCube/Wii releases of MWCC supported generating debug information in both DWA
 - Pro Evolution Soccer
 	- [x] Has `.comment` MW compiler string (found in SLES_50412).
   - [ ] Has DWARF debug sections.
+
+#### PSP
+- Jikan de Fantasia (ULJM-05696)
+  - [x] Has `.comment` MW compiler string.
+  - [X] Has `.debug` section.
   
 ## Decompilation patterns
 ### PS2 MIPS -O0
@@ -174,3 +179,30 @@ nop
 Note that if `plant` *does* clobber `a0`, MWCC cannot perform this optimization.
 
 This behavior can arise at all optimization levels above `-O0` on MWCCPS2 2.4 and 3.0.3.
+
+## Known bugs
+### Static initializer symbol padding
+When compiling C++ code, MWCC emits `.init` and `.ctor` sections implementing static initialization. Certain compiler versions, such as MWCCPSP 3.0.1 219, generate bugged symbols for these sections.
+
+In the MWCC Mac decomp, the code generating these symbols is:
+```cpp
+    char buf[100];
+    Str255 fname;
+
+    COS_FileGetFSSpecInfo(&cparamblkptr->sourcefile, NULL, NULL, fname);
+    sprintf(buf, "__sinit_%*.*s", -fname[0], fname[0], &fname[1]);
+```
+where `fname` is a length-prefixed dynamic string.
+
+In the bugged compilers, the code generating these symbols is something like:
+```cpp
+char *buf;
+char fname[0x100];
+
+GetFileName(&sourcefile, ..., fname, 0x100);
+buf = alloc(fname[0] + 10);
+sprintf(buf, "__sinit_%*.*s", -fname[0], fname[0], fname);
+```
+where `fname` is a null-terminated string, *not* length-prefixed.
+
+Because `fname` is not length-prefixed, static initializer symbols are padded (or truncated) based on the first character of the filename.

@@ -2,7 +2,7 @@
 title: MWCC
 description: Metrowerks C Compiler
 published: true
-date: 2026-03-08T02:03:23.776Z
+date: 2026-03-15T14:48:55.057Z
 tags: compiler, mwcc, metrowerks
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -82,6 +82,8 @@ GameCube/Wii releases of MWCC supported generating debug information in both DWA
   - [ ] Has DWARF debug sections.
 
 #### PSP
+- Gitaroo Man Lives!
+  - [x] Has `.comment` MW compiler string.
 - Jikan de Fantasia (ULJM-05696)
   - [x] Has `.comment` MW compiler string.
   - [X] Has `.debug` section.

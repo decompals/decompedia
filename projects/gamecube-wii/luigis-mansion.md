@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2025-04-23T09:05:15.836Z
 ---
 
-| [Progress](https://decomp.dev/Moddimation/YasikiDolphin) | [Repository](https://github.com/Moddimation/YasikiDolphin) | [Discord](https://discord.gg/hKx3FJJgrV) |
+| [Progress](https://decomp.dev/ThePlayerRolo/lm-decomp) | [Repository](https://github.com/ThePlayerRolo/lm-decomp) | [Discord](https://discord.gg/hKx3FJJgrV) |
 |------------------|---------|----------|
 
 An in-progress decompilation of [Luigi's Mansion](https://wikipedia.org/wiki/Luigi’s_Mansion) for the [Nintendo GameCube](https://wikipedia.org/wiki/Nintendo_GameCube).

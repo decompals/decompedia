@@ -12,7 +12,7 @@ dateCreated: 2025-04-23T09:05:15.836Z
 |------------------|---------|----------|
 
 An in-progress decompilation of [Luigi's Mansion](https://wikipedia.org/wiki/Luigi’s_Mansion) for the [Nintendo GameCube](https://wikipedia.org/wiki/Nintendo_GameCube).
-The focus is currently laid on both the Japanese release (GLMJ01) and American release (GLME01). The original creator first focused on the North American release, which was then changed to the Japanese release in Moddimation's repo. The current repo uses these previous efforts as references for symbols, types, and code.
+The focus is currently laid on both the Japanese release (GLMJ01) and American release (GLME01). The original creator first focused on the North American release, which was then changed to the Japanese release in Moddimation's project. The current project uses these previous efforts as references for symbols, types, and code.
 
 There are no known symbol maps for this game, however, it does come with [RTTI](https://www.sandordargo.com/blog/2023/03/01/binary-sizes-and-rtti).
 

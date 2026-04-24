@@ -12,7 +12,7 @@ dateCreated: 2025-04-23T09:05:15.836Z
 |------------------|---------|----------|
 
 An in-progress decompilation of [Luigi's Mansion](https://wikipedia.org/wiki/Luigi’s_Mansion) for the [Nintendo GameCube](https://wikipedia.org/wiki/Nintendo_GameCube).
-The focus is currently laid on the Japanese release (GLMJ01), but configurations exist for all [available versions](#versions). The original creator first focused on the North American release (GLME01), and it's symbol map was put in a backup file.
+The focus is currently laid on both the Japanese release (GLMJ01) and American release (GLME01). The original creator first focused on the North American release, which was then changed to the Japanese release in Moddimation's repo. The current repo uses these previous efforts as references for symbols, types, and code.
 
 There are no known symbol maps for this game, however, it does come with [RTTI](https://www.sandordargo.com/blog/2023/03/01/binary-sizes-and-rtti).
 
@@ -38,6 +38,10 @@ History
   <li><span style="display:inline-block; width: 110px"><b>Mar. 20 2024</b></span> Moddimation forks <a href="https://github.com/Moddimation/zmansion">CoNesTra/zmansion</a> </li>
   <li><span style="display:inline-block; width: 110px">Apr. 9 2025</span> #luigis-mansion channel is revived</li>
   <li><span style="display:inline-block; width: 110px">Apr. 23 2025</span> project is back on decomp.dev</li>
+  <li><span style="display:inline-block; width: 110px">Dec. 3 2025</span> Project becomes inactive due to drama and loss of interest</li>
+  <li><span style="display:inline-block; width: 110px"><b>Apr. 16 2026</b></span> ThePlayerRolo creates <a href="https://github.com/ThePlayerRolo/lm-decomp">lm-decomp repo on github</a> with an updated toolchain</li>
+  <li><span style="display:inline-block; width: 110px">Apr. 22 2026</span> ThePlayerRolo's project is added on decomp.dev as "Luigi's Mansion (Active)"</li>
+  <li><span style="display:inline-block; width: 110px">Apr. 23 2026</span> ThePlayerRolo's project replaces Moddimation's project on decomp.dev</li>
 </ul>
 
 
@@ -46,7 +50,7 @@ Versions
 | Config ID | Region | Variant | Started? | Release Date |  Build Date  | SDK Rev. |  SDK Build   | Apploader Build |
 |-----------|--------|---------|----------|--------------|--------------|----------|--------------|------------------|
 | GLMJ01    | Japan  | Release |    Yes   | Sep. 14 2001 | Aug. 28 2001 |    37    | Jul. 19 2001 | Apr. 04 2001 |
-| GLME01    |  USA   | Release |   [No]   | Nov. 18 2001 | Sep. 24 2001 |    37    | Jul. 19 2001 | Aug. 9 2001 |
+| GLME01    |  USA   | Release |    Yes   | Nov. 18 2001 | Sep. 24 2001 |    37    | Jul. 19 2001 | Aug. 9 2001 |
 | GLME01_1  |  USA   |  Demo   |    No    | Oct.    2001 | Sep. 28 2001 |    45    | Sep. 08 2001 | Sep. 08 2001 |
 | GLMP01    | Europe |  Demo   |    No    | Mar.    2002 | Jan. 21 2002 |    49    | Dec. 17 2001 | Nov. 30 2001 |
 | GLMP01_1  | Europe | Release |    No    | May   3 2002 | Dec. 17 2001 |    49    | Dec. 17 2001 | Nov. 30 2001 |

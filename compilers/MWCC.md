@@ -2,7 +2,7 @@
 title: MWCC
 description: Metrowerks C Compiler
 published: true
-date: 2026-03-15T14:48:55.057Z
+date: 2026-04-26T18:00:38.201Z
 tags: compiler, mwcc, metrowerks
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -45,6 +45,7 @@ GameCube/Wii releases of MWCC supported generating debug information in both DWA
 - [Shaun Palmer's Pro Snowboarder](https://github.com/Daniel-McCarthy/SPPS)
 - [Street Fighter III: Third Strike](https://github.com/apstygo/sfiii-decomp)
 - [Sonic CD](https://git.sr.ht/~benoitren/soniccddecompilation)
+- [Silent Hill 3](https://github.com/dreamingmoths/memory-of-alessa)
 
 ### PSP
 - [Castlevania: Symphony of the Night](https://github.com/Xeeynamo/sotn-decomp)

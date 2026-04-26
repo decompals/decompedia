@@ -2,7 +2,7 @@
 title: MWCC
 description: Metrowerks C Compiler
 published: true
-date: 2026-04-26T18:00:38.201Z
+date: 2026-04-26T18:03:53.508Z
 tags: compiler, mwcc, metrowerks
 editor: markdown
 dateCreated: 2025-06-01T18:59:42.808Z
@@ -28,6 +28,24 @@ The default linker script for PS2 MWLD joins the text, data, and rodata sections
 
 ### MW Overlay Headers
 Overlays can be identified by their headers which start with an `MWo` identifier.
+
+The following is the overlay header struct found at `Metrowerks/CodeWarrior/PS2 Support/Runtime/Sources/CPP_Support/mwUtils_PS2.c` from a game compiled with MWCCPS2 2.4.
+
+```c
+struct mwOverlayHeader {
+    // total size: 0x40
+    unsigned char identifier[3]; // offset 0x0, size 0x3
+    unsigned char version; // offset 0x3, size 0x1
+    unsigned int id; // offset 0x4, size 0x4
+    unsigned int address; // offset 0x8, size 0x4
+    unsigned int sz_text; // offset 0xC, size 0x4
+    unsigned int sz_data; // offset 0x10, size 0x4
+    unsigned int sz_bss; // offset 0x14, size 0x4
+    unsigned int _static_init; // offset 0x18, size 0x4
+    unsigned int _static_init_end; // offset 0x1C, size 0x4
+    unsigned char name[32]; // offset 0x20, size 0x20
+};
+```
 
 ## Debug Information
 ### PS2

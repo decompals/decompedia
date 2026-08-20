@@ -12,7 +12,7 @@ For years making decompilations of Nintendo DS games was avoided due to the game
 
 Today, most decompilations in the DS scene are for pokemon games done by people at pret. However there's been a recent push for more DS decompilations after tools like dsd were developed (based on efforts from the GC/Wii decompilation scene) to streamline decompilation. 
 
-<h2><a href="/projects/game-boy-advance" style="text-decoration: none; color: darkblue;">Projects</a></h2>
+<h2><a href="/projects/nintendo-ds" style="text-decoration: none; color: darkblue;">Projects</a></h2>
 
 ## Resources
 - [DS Decompilation Discord](https://discord.gg/gwN6M3HQrA)

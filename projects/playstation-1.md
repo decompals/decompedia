@@ -2,16 +2,18 @@
 title: Playstation 1
 description: 
 published: true
-date: 2026-02-15T19:40:22.400Z
+date: 2026-09-08T19:01:33.526Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-11T22:13:31.255Z
 ---
 
 ### Projects
+- [Brave Fencer Musashi](https://github.com/Druthulu/BFM-decomp)
 - [Castlevania: Symphony of the Night](https://github.com/Xeeynamo/sotn-decomp)
 - [Evo's Space Adventures](https://github.com/mkst/esa)
 - [Final Fantasy VII](https://github.com/Drahsid/ffvii)
+- [Jumping Flash!](https://github.com/NotExactlySiev/aloha)
 - [Legacy of Kain: Soul Reaver](https://github.com/fmil95/soul-re)
 - [Mega Man X4](https://github.com/sozud/mmx4)
 - [Metal Gear Solid: Integral](https://github.com/FoxdieTeam/mgs_reversing)

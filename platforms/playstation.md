@@ -2,7 +2,7 @@
 title: PS1
 description: PlayStation 1
 published: true
-date: 2026-02-15T19:39:17.409Z
+date: 2026-09-08T19:00:42.039Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-25T20:54:39.020Z
@@ -25,6 +25,7 @@ The existing tools designed to support N64 decompilation, such as **m2c**, **asm
 - [maspsx](https://github.com/mkst/maspsx)
 - [psyq2elf](https://gitlab.com/jype/psyq2elf)
 - [psyq-obj-parser](https://github.com/grumpycoders/pcsx-redux/tree/main/tools/psyq-obj-parser)
+- [xsig](https://github.com/Druthulu/xsig)
 
 ### Decompilers
 

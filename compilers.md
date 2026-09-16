@@ -8,6 +8,9 @@ editor: markdown
 dateCreated: 2025-06-11T03:08:02.505Z
 ---
 
+- [Borland C/C++](/compilers/borland-cc)
+- [Delphi](/compilers/delphi)
 - [GCC](/compilers/GCC)
 - [IDO](/compilers/ido)
 - [MWCC](/compilers/MWCC)
+- [Open Watcom](/compilers/open-watcom)

@@ -10,4 +10,5 @@ dateCreated: 2025-06-11T03:08:02.505Z
 
 - [GCC](/compilers/GCC)
 - [IDO](/compilers/ido)
+- [MSVC](/compilers/MSVC)
 - [MWCC](/compilers/MWCC)

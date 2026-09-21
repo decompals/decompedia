@@ -1,8 +1,8 @@
 ---
-title: Playstation 2 Projects
+title: Playstation 2
 description: 
 published: true
-date: 2026-02-15T19:40:03.238Z
+date: 2026-09-21T14:05:34.058Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T12:41:47.473Z

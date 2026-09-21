@@ -2,7 +2,7 @@
 title: Playstation 2
 description: 
 published: true
-date: 2026-09-21T14:05:34.058Z
+date: 2026-09-21T14:07:36.152Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-23T12:41:47.473Z
@@ -11,6 +11,7 @@ dateCreated: 2025-04-23T12:41:47.473Z
 
 ### Projects
 - [Dark Cloud](https://github.com/Adubbz/DCDecomp)
+- [Dog's Life](https://github.com/IWILLCRAFT-M0d/dogcomp)
 - [Donald Duck: Goin' Quackers](https://github.com/AngheloAlf/goin_quackers)
 - [Fatal Frame](https://github.com/Mikompilation/Himuro)
 - [Fatal Frame 2](https://github.com/Mikompilation/Minakami)

@@ -2,7 +2,7 @@
 title: Lego Star Wars 3 - The Clone Wars
 description: 
 published: true
-date: 2026-09-24T15:30:49.555Z
+date: 2026-09-24T15:32:41.254Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-24T15:30:49.555Z
@@ -20,3 +20,7 @@ The game contains a symbol mapfile on the disc, and found on [debugging.games](h
 - Lego
 - Revolution SDK
 - nw4hbm
+
+## External Links
+- [decomp.dev progress](https://decomp.dev/ThePlayerRolo/LegoCloneWarsWii)
+- [GitHub repo](https://github.com/ThePlayerRolo/LegoCloneWarsWii)

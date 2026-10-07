@@ -1,8 +1,8 @@
 ---
 title: ELF (Executable and Linkable Format)
 description: Decomp-oriented information on the ELF format
-published: false
-date: 2026-10-07T17:36:03.347Z
+published: true
+date: 2026-10-07T17:36:34.349Z
 tags: elf, binary, executable, matching
 editor: markdown
 dateCreated: 2026-10-07T16:45:13.295Z

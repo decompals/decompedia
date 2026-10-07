@@ -2,7 +2,7 @@
 title: ELF (Executable and Linkable Format)
 description: Decomp-oriented information on the ELF format
 published: false
-date: 2026-10-07T16:45:13.295Z
+date: 2026-10-07T17:36:03.347Z
 tags: elf, binary, executable, matching
 editor: markdown
 dateCreated: 2026-10-07T16:45:13.295Z
@@ -32,7 +32,7 @@ GNU [binutils](https://en.wikipedia.org/wiki/GNU_Binutils) is often used to tran
     only contains the code and data sections, removing all ELF metadata/headers.
     This removes the requirement of matching the original binary's metadata, and
     also allows for [shiftability](/resources/glossary/shiftability).
-    
+
 ## Global Pointers
 
 On platforms which support a "global pointer", data can be segmented into
@@ -47,6 +47,9 @@ normally require two instructions.
 When `-G` is non-zero, some sections will be split into two, with one prefixed
 with `s` (e.g. `.data` vs. `.sdata`). The `s` indicates that the section stores
 "small" data whose length in bytes is below the specified `-G` limit.
+
+If `-G` is disabled on these platforms (`-G0`), the "small" data sections cease
+to exist and all data is folded into the main sections.
 
 ## Sections
 
@@ -132,9 +135,85 @@ uint64_t baz;
 u8 foo[10];
 ```
 
-## COMMON data
+### `COMMON` and `.scommon`
 
+These are relatively rare sections that are only enabled with compiler flags
+(`-fcommon` in GCC).
 
+Particularly in C code, a global variable might need to be accessible from
+multiple different [translation units](https://en.wikipedia.org/wiki/Translation_unit_(programming)) (TUs). This is typically handled by
+using `extern` with a forward declaration in a header:
+
+```c
+// explode.h
+// Exported declaration so other TUs can use this variable.
+extern int foo[2];
+
+// explode.c
+// Actual storage location of the variable.
+int foo[2] = { 0, 1 };
+```
+
+However, if the variable storage isn't actually initialized, the C standard
+considers it a "tentative definition"; there's no way to know whether it's
+_actually_ stored in `explode.c`'s TU. Some other TU might declare its own
+storage for `foo`.
+
+```c
+// explode.h
+// Exported declaration so other TUs can use this variable.
+extern int foo[2];
+
+// explode.c
+int foo[2];
+
+// explosion.c
+int foo[2]; // Problem; who actually owns the storage?
+```
+
+With `-fno-common`, this leads to a linker error; there are multiple definitions
+of the same variable.
+
+With `-fcommon`, the symbol is defined as `.comm`, and the linker actually
+attempts to resolve this by:
+
+- moving `foo` to a `COMMON` section, either inside of or next to `.bss`
+- resolving all references to that variable to use the `COMMON` location
+
+The two different definitions of `foo` now resolve to the same place.
+
+Compared to normal `.bss` data, however, `COMMON` data has several notable
+behavior quirks.
+
+#### Section Location
+
+Depending on the linker script, `COMMON` symbols for a TU can be
+located in one of two places in the final executable:
+
+- merged with the TU's `.bss` section
+- merged together with all other `COMMON` symbols in the binary
+
+The latter case is much easier to detect for binaries with debug symbols.
+When splitting the binary, you will encounter TUs which seemingly have
+multiple `.sbss` or `.bss` segments (normally impossible).
+This is a hallmark of `COMMON` usage.
+
+The former case is easier to work with, but can introduce potentially insidious
+matching problems because of...
+
+#### Variable Reordering
+
+When the linker is resolving multiple definitions, it needs to keep track of
+which variables it has seen before. This is typically done through a
+hashing function; two variables with the same name will resolve to the
+same location.
+
+However, because the variable storage is now independent of a specific TU,
+the linker will **arbitrarily reorder variables** with some
+implementation-defined method.
+
+Typically, the new variable order depends on the output of the hashing
+function. In other words, **variable names will directly influence the linked data order.**
 
 ## Linking
 
@@ -179,14 +258,16 @@ wut.elf
   - .bss (baz)
 ```
 
+This deterministic behavior is what allows splitting tools,
+like `splat` and `dtk`, to effectively replicate the original object files
+of an executable.
+
 Note that both the object order `(foo, bar, baz)` and the final section order
 here are arbitrary and can be specified by the user/developer through a linker
 script.
 The default section order is typically platform-defined.
 
 ## Platform-Specific Information
-
-### PSX
 
 ### PS2
 

@@ -2,13 +2,13 @@
 title: Home
 description: 
 published: true
-date: 2026-02-15T19:38:53.710Z
+date: 2026-11-02T04:23:04.041Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-19T19:55:57.341Z
 ---
 
-## What is this?
+## What is this ?
 
 This site is dedicated to resources on video game decompilation.
 

@@ -9,6 +9,7 @@ dateCreated: 2025-06-11T22:13:31.255Z
 ---
 
 ### Projects
+- [BattleTanx: Global Assault](https://github.com/TheGh0stShip/BattleTanx-Global-Assault-PS1)
 - [Brave Fencer Musashi](https://github.com/Druthulu/BFM-decomp)
 - [Castlevania: Symphony of the Night](https://github.com/Xeeynamo/sotn-decomp)
 - [Chrono Cross](https://github.com/jdperos/chrono-cross-decomp)
